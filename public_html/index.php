@@ -1,2 +1,2 @@
-For more information, click <a href="tools.wmflabs.org/zppixbot/about.php">here</a>.
-List of contributors, click <a href="tools.wmflabs.org/zppixbot/contribs.php">here</a>
+For more information, click <a href="/about.php">here</a>.
+List of contributors, click <a href="/contribs.php">here</a>
