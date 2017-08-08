@@ -1,9 +1,9 @@
 {
-    "name" : "Zppixbot",
-    "title" : "Zppixbot",
-    "description" : "Experimental/dev version of PiagetBot",
+    "name" : "ZppixBot",
+    "title" : "ZppixBot",
+    "description" : "IRC bot running Sopel",
     "url" : "http://tools.wmflabs.org/zppixbot",
     "keywords" : "IRC, bot, piagetbot, piaget2, development, experimental, Zppix",
-    "author" : "tom29739 (bot operator), Zppix (Developer and experimental/dev bot operator)",
-    "repository" : "https://github.com/pix1234/sopel.git"
+    "author" : "tom29739 (bot operator), Zppix (Developer and experimental/dev bot operator)", "Reception123 (Developer)", "SwisterTwister",
+    "repository" : "https://phabricator.wikimedia.org/diffusion/LTZB/"
 }
