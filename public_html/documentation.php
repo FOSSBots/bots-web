@@ -1,0 +1,4 @@
+<!-- Dear GCI 2017 Student please replace all this text with proper documentation to get apporved task completion. Thank you -->
+Lorem ipsum dolor sit amet, denique liberavisse ne usu, at utamur sapientem nam. Reque minim mea id, est ad vide nonumy accumsan. Ea viderer maiorum gloriatur sed, et vix eros dolore. Regione appareat facilisis his ex, at alienum insolens sed. Solet elaboraret his te.
+
+In eligendi pertinax duo. Cu hinc numquam laoreet est. Ut usu essent graecis vivendo. Copiosae definiebas dissentiunt et nec, ipsum dolorum an vim, id error maluisset mel. Ei aliquam graecis sed. Ne vel nihil exerci, cum eu constituto consequuntur. Paulo consulatu vituperatoribus eu mel, etiam adipisci salutatus vis ne.
