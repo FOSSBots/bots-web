@@ -1,4 +1,5 @@
 For more information, click <a href="/zppixbot/about.php">here</a>. </br>
+For a list of commands, click <a href="/zppixbot/documentation.html">here</a>. </br>
 List of contributors, click <a href="/zppixbot/contribs.php">here</a> </br>
 
 If you need ZppixBot in your channel, please contact Zppix or <a href="https://meta.miraheze.org/wiki/User:Reception123">Reception123</a> </br>

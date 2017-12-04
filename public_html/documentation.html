@@ -1,0 +1,352 @@
+<title>List of Commands -ZppixBot</title>
+<H1>Commands</H1>
+<table>
+<thead>
+<tr>
+<th>Commands</th>
+<th>Purpose</th>
+<th>Example</th>
+<th>Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.accesslevel</td>
+<td>Shows what level of access you have.</td>
+<td></td>
+<td>adminlist</td>
+</tr>
+<tr>
+<td>.ban</td>
+<td><br />    This give admins the ability to ban a user.<br />    The bot must be a Channel Operator for this command to work.<br /></td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.blocks</td>
+<td><br />    Manage ZppixBot&#39;s blocking features.<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Making-Sopel-ignore-people">https://github.com/sopel-irc/sopel/wiki/Making-Sopel-ignore-people</a><br /></td>
+<td></td>
+<td>coretasks</td>
+</tr>
+<tr>
+<tr>
+<td>.c</td>
+<td>Google calculator.</td>
+<td>.c 5 + 3</td>
+<td>calc</td>
+</tr>
+<tr>
+<td>.chairs</td>
+<td><br />    Set the meeting chairs.<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.chairs Tyrope Jason elad</td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.commands</td>
+<td>Return a list of ZppixBot&#39;s commands</td>
+<td></td>
+<td>help</td>
+</tr>
+<tr>
+<td>.duck</td>
+<td>Queries Duck Duck Go for the specified input.</td>
+<td></td>
+<td>search</td>
+</tr>
+<tr>
+<td>.endmeeting</td>
+<td><br />    End a meeting.<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.endmeeting</td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.ety</td>
+<td>Look up the etymology of a word</td>
+<td>.ety word</td>
+<td>etymology</td>
+</tr>
+<tr>
+<td>.countdown</td>
+<td><br />    .countdown <year> <month> <day> - displays a countdown to a given date.<br /></td>
+<td></td>
+<td>countdown</td>
+</tr>
+<tr>
+<td>.tld</td>
+<td>Show information about the given Top Level Domain.</td>
+<td></td>
+<td>tld</td>
+</tr>
+<tr>
+<td>.task></td>
+<td>Gives a link to the specified task on Miraheze Phabricator<td>
+<td>.task 1</td>
+<td>mh_phab</td>
+</tr>
+<tr>
+<td>.iplookup<br />.ip</td>
+<td>IP Lookup tool</td>
+<td>.iplookup 8.8.8.8</td>
+<td>ip</td>
+</tr>
+<tr>
+<td>.isup</td>
+<td>isup.me website status checker</td>
+<td></td>
+<td>isup</td>
+</tr>
+<tr>
+<td>.kick</td>
+<td><br />    Kick a user from the channel.<br /></td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.in</td>
+<td>Gives you a reminder in the given amount of time.</td>
+<td>.in 3h45m Release a new version of ZppixBot</td>
+<td>reminders</td>
+</tr>
+<tr>
+<td>.at</td>
+<td>Gives you a reminder at the given time. Time format: hh:mm:ss. To see what timezone is used, type .getchanneltz (if setting a reminder in a IRC channel) or .gettz (elsewhere)</td>
+<td>.at 13:47 Update the servers!</td>
+<td>reminders</td>
+</tr>
+<tr>
+<td>.cancelreminder</td>
+<td>Pings the bot operators to cancel a reminder that you no longer need.</td>
+<td>.cancelreminder (insert reminder message here)</td>
+<td>reminders</td>
+</tr>
+<tr>
+<td>.miraheze</td>
+<td>This command will tell you about Miraheze and where to learn more</td>
+<td></td>
+<td>miraheze</td>
+</tr>
+<tr>
+<td>.gethelp</td>
+<td>Pings Miraheze admins, prompting to help a user that needs help.</td>
+<td>.gethelp I cannot access https://www.meta.miraheze.org</td>
+<td>miraheze</td>
+</tr>
+<tr>
+<td>.python</td>
+<td>Tells you what version of Python ZppixBot is running.</td>
+<td></td>
+<td>pyver</td>
+</tr>
+<tr>
+<td>.kickban<br />.kb</td>
+<td><br />   This gives admins the ability to kickban a user.<br />   The bot must be a Channel Operator for this command to work<br />   .kickban [#chan] user1 user!<em>@</em> get out of here<br /></td>
+<td></td>
+<td>adminchannel</td>>
+</tr>
+<tr>
+<td>.mangle</td>
+<td>Repeatedly translate the input until it makes no sense.</td>
+<td></td>
+<td>translate</td>
+</tr>
+<tr>
+<td>.action</td>
+<td><br />    Log an action in the meeting log<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.action elad will develop a meetbot</td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.agreed</td>
+<td><br />    Log an agreement in the meeting log.<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.agreed bowties are not cool</td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.info</td>
+<td><br />    Log an informational item in the meeting log<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.info all board members present</td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.link</td>
+<td><br />    Log a link in the meeting log.<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.link <a href="http://example.com">http://example.com</a></td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.subject</td>
+<td><br />    Change the meeting subject.<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.subject roll call</td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.movie</td>
+<td><br />    Returns some information about a movie, like Title, Year, Rating, Genre and IMDB Link.<br /></td>
+<td>.movie Movie Title</td>
+<td>movie</td>
+</tr>
+<tr>
+<td>.part</td>
+<td>Part the specified channel. This is an admin-only command.</td>
+<td>.part #example</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>.quiet</td>
+<td><br />    This gives admins the ability to quiet a user.<br />    The bot must be a Channel Operator for this command to work<br /></td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.quit</td>
+<td>Quit from the server. This is an owner-only command.</td>
+<td></td>
+<td>admin</td>
+</tr>
+<tr>
+<td>.rand</td>
+<td>.rand <arg1> <arg2> - Generates a random integer between <arg1> and <arg2>.</td>
+<td></td>
+<td>rand</td>
+</tr>
+<tr>
+<td>.redditor</td>
+<td>Show information about the given Redditor</td>
+<td></td>
+<td>reddit-info</td>
+</tr>
+<tr>
+<td>.search</td>
+<td>Searches Google, Bing, and Duck Duck Go.</td>
+<td>.search nerdfighter</td>
+<td>search</td>
+</tr>
+<tr>
+<td>.seen</td>
+<td>Reports when and where the user was last seen.</td>
+<td></td>
+<td>seen</td>
+</tr>
+<tr>
+<td>.tmask</td>
+<td><br />    Set the mask to use for .topic in the current channel. %s is used to allow<br />    substituting in chunks of text.<br /></td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.showmask</td>
+<td>Show the topic mask for the current channel.</td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.spellcheck</td>
+<td><br />    Says whether the given word is spelled correctly, and gives suggestions if<br />    it&#39;s not.<br /></td>
+<td>.spellcheck stuff</td>
+<td>spellcheck</td>
+</tr>
+<tr>
+<td>.startmeeting</td>
+<td><br />    Start a meeting.<br />    <a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a><br /></td>
+<td>.startmeeting title or .startmeeting</td>
+<td>meetbot</td>
+</tr>
+<tr>
+<td>.suggest</td>
+<td>Suggest terms starting with given input</td>
+<td></td>
+<td>search</td>
+</tr>
+<tr>
+<td>.t</td>
+<td>Returns the current time.</td>
+<td>.t UTC</td>
+<td>clock</td>
+</tr>
+<tr>
+<td>.topic</td>
+<td><br />    This gives ops the ability to change the topic.<br /></td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.translate</td>
+<td>Translates a phrase, with an optional language hint.</td>
+<td></td>
+<td>translate</td>
+</tr>
+<tr>
+<td>.unban</td>
+<td><br />    This give admins the ability to unban a user.<br />    The bot must be a Channel Operator for this command to work.<br /></td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.unquiet</td>
+<td><br />   This gives admins the ability to unquiet a user.<br />   The bot must be a Channel Operator for this command to work<br /></td>
+<td></td>
+<td>adminchannel</td>
+</tr>
+<tr>
+<td>.setchanneltz</td>
+<td><br />    Set the preferred time zone for the channel.<br /></td>
+<td></td>
+<td>clock</td>
+</tr>
+<tr>
+<td>.setchanneltimeformat</td>
+<td><br />    Sets your preferred format for time. Uses the standard strftime format. You<br />    can use <a href="http://strftime.net">http://strftime.net</a> or your favorite search engine to learn more.<br /></td>
+<td>.setchanneltimeformat %FT%T%z</td>
+<td>clock</td>
+</tr>
+<tr>
+<td>.settz</td>
+<td><br />    Set your preferred time zone. Most timezones will work, but it&#39;s best to<br />    use one from <a href="http://dft.ba/-tz">http://dft.ba/-tz</a><br /></td>
+<td></td>
+<td>clock</td>
+</tr>
+<tr>
+<td>.settimeforma</td>
+<td><br />    Sets your preferred format for time. Uses the standard strftime format. You<br />    can use <a href="http://strftime.net">http://strftime.net</a> or your favorite search engine to learn more.<br /></td>
+<td>.settimeformat %FT%T%z</td>
+<td>clock</td>
+</tr>
+<tr>
+<td>.setlocation</td>
+<td>Set your default weather location.</td>
+<td>.setlocation Columbus, OH</td>
+<td>weather</td>
+</tr>
+<tr>
+<td>.version</td>
+<td>Tells you what version of Sopel ZppixBot is running.</td>
+<td></td>
+<td>version</td>
+</tr>
+<tr>
+<td>.weather</td>
+<td>.weather location - Show the weather at the given location.</td>
+<td>.weather London</td>
+<td>weather</td>
+</tr>
+<tr>
+<td>.w</td>
+<td>Look up something on Wikipedia</td>
+<td></td>
+<td>wikipedia</td>
+</tr>
+<tr>
+<td>.wt</td>
+<td>Look up a word on Wiktionary.</td>
+<td>.wt bailiwick</td>
+<td>wiktionary</td>
+</tr>
+<tr>
+<td>.xkcd</td>
+<td><br />    .xkcd - Finds an xkcd comic strip. Takes one of 3 inputs:<br />    If no input is provided it will return a random comic<br />    If numeric input is provided it will return that comic<br />    If non-numeric input is provided it will return the first google result for those keywords on the xkcd.com site<br /></td>
+<td></td>
+<td>xkcd</td>
+</tr>
+</tbody>
+</table>
+
