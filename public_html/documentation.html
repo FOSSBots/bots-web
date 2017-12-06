@@ -1,5 +1,10 @@
-<title>List of Commands -ZppixBot</title>
-<H1>Commands</H1>
+<title>Documentation -ZppixBot</title>
+<h1>Table of contents</h1>
+<ol>
+    <li><a href="#commands-list">List of commands</a></li>
+    <li><a href="#module-development">Module Development</a></li>
+</ol>
+<h1 id="commands-list">List of commands</h1>
 <table>
 <thead>
 <tr>
@@ -349,4 +354,95 @@
 </tr>
 </tbody>
 </table>
+<h1 id="module-development">Module development</h1>
+If you decided to extend ZppixBot with some functionality, you will need to create a new module.<br />
+This instruction will guide you through the process of custom module development<br />
+First of all, create a new file in <i>modules</i> directory with name <i>your_module.py</i><br />
+Bot modules are python scripts, so we shall start with importing required libraries (bot is using sopel) for your module to work. Here is the list of imports typically used:
+<pre>
+from __future__ import unicode_literals, absolute_import, print_function, division
+import sopel
+import sopel.module
+import requests
+import sopel.tools
+from sopel.module import rule, priority, thread, commands, example
+</pre>
+<br />
 
+Let's define a function, which replies to ".hi" command with a greeting:
+<pre>
+@commands('hi')
+def bot_hi(bot, trigger):
+    bot.say('Hi ' + trigger.nick + '!')
+</pre>
+<b>Explanation</b>: using <i>@commands</i> we specify which command bot should react to (in our case ".hi")<br />
+Handler function has two parameters:<br />
+<ul>
+    <li>bot - bot instance, we use it to interact with chat (i.e. to send messages)</li>
+    <li>trigger - provides us info about incoming command (text, sender, etc)</li>
+</ul>
+So in our example, we use <i>bot.say</i> to send message to the chat saying "hi, your_name!"<br />
+This is minimum required code for your module to function. You may try running it now.<br />
+<br />
+
+Unluckily, our bot will react only to ".hi" messages, but you may want it to react to ".hello" and ".hey" as well<br />
+In order to achieve that, we may set multiple command variations bot will respond to by specifying all of them in the decorator:
+<pre>
+<b>@commands('hi', 'hello', 'hey')</b>
+def bot_hi(bot, trigger):
+    bot.say('Hi ' + trigger.nick + '!')
+</pre>
+You may try running that code and see that bot will react to all commands mentioned by saying "hi" to message sender.
+<br />
+
+Finally, you may want bot to accept some input from user. To demonstrate how to achieve that, let's develop a function which will welcome chat newcomers<br />
+For example, if John joins your chat, you may ask bot to welcome him with command ".welcome John" and bot will send a message saying "Welcome, John! Enjoy yourself in this chat!"<br />
+Similarly, you may ask bot to welcome Bob my saying ".welcome Bob" and bot will say "Welcome, Bob! Enjoy yourself in this chat!"<br />
+Let's also use <i>@example decorator</i> to provide command usage example:
+<pre>
+@commands('welcome')
+@example('.welcome John')
+def bot_welcome(bot, trigger):
+    bot.say('Welcome ' + trigger.group(2) + '! Enjoy yourself in this chat!')
+</pre>
+<b>Explanation</b>: we use trigger.group(2) to get the text after the command (in our example - name of user to welcome)<br />
+<br />
+
+Additionally, you may use <i>bot.reply</i>, which is similar to <i>bot.say</i>, but puts message sender name in the beginning of the message<br />
+To demonstrate that, let's create an "echo" function - it will send back to you your message, which will be starting with you name (i.e mention you):
+<pre>
+@commands('echo')
+@example('.echo hello world!')
+def bot_welcome(bot, trigger):
+    bot.reply('You said: ' + trigger.group(2))
+</pre>
+<br />
+
+That was an example of simple module. We recommend you visiting <a href="https://github.com/sopel-irc/sopel/wiki">Sopel Wiki</a> for more info on this topic.<br />
+<br />
+
+Complete source code of this example (file <i>simple_module.py</i>):
+<pre>
+from __future__ import unicode_literals, absolute_import, print_function, division
+import sopel
+import sopel.module
+import requests
+import sopel.tools
+from sopel.module import rule, priority, thread, commands, example
+
+@commands('hi', 'hello', 'hey')
+def bot_hi(bot, trigger):
+    bot.say('Hi ' + trigger.nick + '!')
+
+
+commands('welcome')
+@example('.welcome John')
+def bot_welcome(bot, trigger):
+    bot.say('Welcome ' + trigger.group(2) + '! Enjoy yourself in this chat!')
+
+
+@commands('echo')
+@example('.echo hello world!')
+def bot_welcome(bot, trigger):
+    bot.reply('You said: ' + trigger.group(2))
+</pre>
