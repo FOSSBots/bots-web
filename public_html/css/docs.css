@@ -1,0 +1,41 @@
+html {
+    font-family: 'Times New Roman';
+}
+
+body {
+    margin: 8px;
+}
+
+h1 {
+    font-weight: normal;
+    display: block;
+    border-bottom: 1px solid #a2a9b1;
+}
+
+a {
+    text-decoration: none;
+    color: #0645ad;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #ebebeb;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+th, td {
+    padding: 0.5em;
+}
+
+pre {
+    padding: 1em;
+    font-family: monospace;
+    background-color: #f5f5f5;
+    white-space: pre-wrap;
+}
