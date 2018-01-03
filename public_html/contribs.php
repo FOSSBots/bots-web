@@ -1,4 +1,4 @@
-<title>Contributors</title>
+<title>Contributors -ZppixBot</title>
 <h1>People whom have contributed to Zppixbot</h1><br />
 Zppix- Operator<br />
 tom29739- Release version bot operator, developer<br />
