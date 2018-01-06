@@ -10,6 +10,14 @@
     <ol>
         <li><a href="#commands-list">List of commands</a></li>
         <li><a href="#module-development">Module Development</a></li>
+        <li><a href="#managing-bot">Managing the bot (for maintainers)</a></li>
+        <ol>
+           <li><a href="#restarting-bot">Restarting the bot</a></li>
+           <li><a href="#changing-modules">Making changes to modules</a></li>
+           <li><a href="#config-changes">Making config changes</a></li>
+           <li><a href="#cancel-reminder">Canceling a reminder</a></li>
+           <li><a href="#update-website">Updateing the website for ZppixBot</a></li>
+        </ol>
     </ol>
     <h1 id="commands-list">List of commands</h1>
     <table>
@@ -92,7 +100,7 @@
                 <td>tld</td>
             </tr>
             <tr>
-                <td>.task></td>
+                <td>.task</td>
                 <td>Gives a link to the specified task on Miraheze Phabricator</td>
                 <td>.task 1</td>
                 <td>mh_phab</td>
@@ -373,13 +381,13 @@
             </tr>
         </tbody>
     </table>
-
+ 
     <h1 id="module-development">Module development</h1>
     If you decided to extend ZppixBot with some functionality, you will need to create a new module.<br />
     This instruction will guide you through the process of custom module development<br />
     First of all, create a new file in <i>modules</i> directory with name <i>your_module.py</i><br />
     Bot modules are python scripts, so we shall start with importing required libraries (bot is using sopel) for your module to work. Here is the list of imports typically used:
-
+ 
 <pre>
 from __future__ import unicode_literals, absolute_import, print_function, division
 import sopel
@@ -388,15 +396,15 @@ import requests
 import sopel.tools
 from sopel.module import rule, priority, thread, commands, example
 </pre>
-
+ 
     Let's define a function, which replies to ".hi" command with a greeting:
-
+ 
 <pre>
 @commands('hi')
 def bot_hi(bot, trigger):
     bot.say('Hi ' + trigger.nick + '!')
 </pre>
-
+ 
     <b>Explanation</b>: using <i>@commands</i> we specify which command bot should react to (in our case ".hi")<br />
     Handler function has two parameters:<br />
     <ul>
@@ -408,43 +416,43 @@ def bot_hi(bot, trigger):
     <br />
     Unluckily, our bot will react only to ".hi" messages, but you may want it to react to ".hello" and ".hey" as well<br />
     In order to achieve that, we may set multiple command variations bot will respond to by specifying all of them in the decorator:
-
+ 
 <pre>
 <b>@commands('hi', 'hello', 'hey')</b>
 def bot_hi(bot, trigger):
     bot.say('Hi ' + trigger.nick + '!')
 </pre>
-
+ 
     You may try running that code and see that bot will react to all commands mentioned by saying "hi" to message sender.
     <br />
     Finally, you may want bot to accept some input from user. To demonstrate how to achieve that, let's develop a function which will welcome chat newcomers<br />
     For example, if John joins your chat, you may ask bot to welcome him with command ".welcome John" and bot will send a message saying "Welcome, John! Enjoy yourself in this chat!"<br />
     Similarly, you may ask bot to welcome Bob my saying ".welcome Bob" and bot will say "Welcome, Bob! Enjoy yourself in this chat!"<br />
     Let's also use <i>@example decorator</i> to provide command usage example:
-
+ 
 <pre>
 @commands('welcome')
 @example('.welcome John')
 def bot_welcome(bot, trigger):
     bot.say('Welcome ' + trigger.group(2) + '! Enjoy yourself in this chat!')
 </pre>
-
+ 
     <b>Explanation</b>: we use <i>trigger.group(2)</i> to get the text after the command (in our example - name of user to welcome)<br />
     <br />
     Additionally, you may use <i>bot.reply</i>, which is similar to <i>bot.say</i>, but puts message sender name in the beginning of the message<br />
     To demonstrate that, let's create an "echo" function - it will send back to you your message, which will be starting with you name (i.e mention you):
-
+ 
 <pre>
 @commands('echo')
 @example('.echo hello world!')
 def bot_welcome(bot, trigger):
     bot.reply('You said: ' + trigger.group(2))
 </pre>
-
+ 
     That was an example of simple module. We recommend you visiting <a href="https://github.com/sopel-irc/sopel/wiki">Sopel Wiki</a> for more info on this topic.<br />
     <br />
     Complete source code of this example (file <i>simple_module.py</i>):
-
+ 
 <pre>
 from __future__ import unicode_literals, absolute_import, print_function, division
 import sopel
@@ -452,23 +460,65 @@ import sopel.module
 import requests
 import sopel.tools
 from sopel.module import rule, priority, thread, commands, example
-
+ 
 @commands('hi', 'hello', 'hey')
 def bot_hi(bot, trigger):
     bot.say('Hi ' + trigger.nick + '!')
-
-
+ 
+ 
 commands('welcome')
 @example('.welcome John')
 def bot_welcome(bot, trigger):
     bot.say('Welcome ' + trigger.group(2) + '! Enjoy yourself in this chat!')
-
-
+ 
+ 
 @commands('echo')
 @example('.echo hello world!')
 def bot_welcome(bot, trigger):
     bot.reply('You said: ' + trigger.group(2))
 </pre>
-
+<h1 id="managing-bot">Managing the bot (for maintainers)</h1>
+<h2 id="restarting-bot">Restarting the bot</h2>
+To restart the bot first ssh to login.tools.wmflabs.org.
+<pre>ssh (your username)@login.tools.wmflabs.org</pre>
+Next become ZppixBot.
+<pre>(your username)@tools-bastion-03:~$ become zppixbot</pre>
+Finally run the following command:
+<pre>tools.zppixbot@tools-bastion-03:~$ kubectl delete pods --all</pre>
+The bot will quit from IRC and rejoin.
+<h2 id="changing-modules">Making changes to modules</h2>
+To make any module changes or additions, first commit the changes/additions on our GitHub repository.
+Next SSH to Toolforge and become ZppixBot.
+<pre>ssh (your username)@login.tools.wmflabs.org
+(your username)@tools-bastion-03:~$ become zppixbot
+zppixbot@tools-bastion-03:~$</pre>
+Using the cd command, change your current working directory to ~/.sopel and once in said directory run git pull. This pulls in any new changes to the GitHub repository.
+<pre>zppixbot@tools-bastion-03:~$ cd ~/.sopel
+tools.zppixbot@tools-bastion-03:~/.sopel$ git pull</pre>
+Finally connect to IRC and in a private message with ZppixBot say .reload and the bot will reload the module files. Saying "ZppixBot: reload" in any channel that ZppixBot is currently in will work as well.
+<h2 id="config-changes">Making config changes</h2>
+1. ssh to Toolforge and become ZppixBot<br/>
+2. cd into ~/.sopel<br/>
+3. Make any necessary changes to the config by editing default.cfg (ie: nano default.cfg or vim default.cfg) and save the file.<br/>
+4. Restart the bot using the guide above.
+<h2 id="cancel-reminder">Canceling a reminder</h2>
+To cancel a reminder first connect to Toolforge and become ZppixBot.
+<pre>ssh (your username)@login.tools.wmflabs.org
+(your username)@tools-bastion-03:~$ become zppixbot
+zppixbot@tools-bastion-03:~$</pre>
+Next cd into ~/.sopel and edit ZppixBot-chat.freenode.net.reminders.db and remove the entry for the reminder you want to cancel, and save the file.
+<pre>zppixbot@tools-bastion-03:~$ cd ~/.sopel
+tools.zppixbot@tools-bastion-03:~/.sopel$ nano ZppixBot-chat.freenode.net.reminders.db</pre>
+Finally reboot the bot using the guide above.
+<h2 id="update-website">Updateing the website of ZppixBot</h2>
+First push your changes to the repository on gerrit.wikimedia.org. Next ssh to Toolforge and become ZppixBot.
+<pre>ssh (your username)@login.tools.wmflabs.org
+(your username)@tools-bastion-03:~$ become zppixbot
+zppixbot@tools-bastion-03:~$</pre>
+Next cd into ~/ZppixBot and run git pull. This will pull in any new changes to the repository on gerrit.wikimedia.org.
+<pre>zppixbot@tools-bastion-03:~$ cd ~/ZppixBot
+tools.zppixbot@tools-bastion-03:~/ZppixBot$ git pull</pre>
+Go to tools.wmflabs.org and check to make sure your changes are present.
 </body>
 </html>
+
