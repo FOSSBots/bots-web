@@ -49,7 +49,7 @@
             <tr>
                 <td>.blocks</td>
                 <td>Manage ZppixBot&#39;s blocking features.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Making-Sopel-ignore-people">https://github.com/sopel-irc/sopel/wiki/Making-Sopel-ignore-people</a></td>
-                <td></td>
+                <td>.blocks add nick somenickhere</td>
                 <td>coretasks</td>
             </tr>
             <tr>
@@ -94,13 +94,13 @@
                     .countdown &lt;year&gt; &lt;month&gt; &lt;day&gt;
                     - displays a countdown to a given date.
                 </td>
-                <td></td>
+                <td>.countdown 2019 09 01</td>
                 <td>countdown</td>
             </tr>
             <tr>
                 <td>.tld</td>
                 <td>Show information about the given Top Level Domain.</td>
-                <td></td>
+                <td>.tld .com</td>
                 <td>tld</td>
             </tr>
             <tr>
@@ -118,7 +118,7 @@
             <tr>
                 <td>.isup</td>
                 <td>isup.me website status checker</td>
-                <td></td>
+                <td>.isup miraheze.org</td>
                 <td>isup</td>
             </tr>
             <tr>
@@ -160,19 +160,19 @@
             <tr>
                 <td>.python</td>
                 <td>Tells you what version of Python ZppixBot is running.</td>
-                <td></td>
+                <td>.python</td>
                 <td>pyver</td>
             </tr>
             <tr>
                 <td>.kickban<br />.kb</td>
                 <td>This gives admins the ability to kickban a user.<br />The bot must be a Channel Operator for this command to work</td>
                 <td>.kickban [#chan] user1 user!<em>@</em> get out of here</td>
-                <td>adminchannel</td>
+                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.mangle</td>
                 <td>Repeatedly translate the input until it makes no sense.</td>
-                <td></td>
+                <td>.mangle this is a sentence</td>
                 <td>translate</td>
             </tr>
             <tr>
@@ -220,13 +220,13 @@
             <tr>
                 <td>.quiet</td>
                 <td>This gives admins the ability to quiet a user.<br />The bot must be a Channel Operator for this command to work</td>
-                <td></td>
-                <td>adminchannel</td>
+                <td>.quiet Example</td>
+                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.quit</td>
                 <td>Quit from the server. This is an owner-only command.</td>
-                <td></td>
+                <td>.quit</td>
                 <td>admin</td>
             </tr>
             <tr>
@@ -236,14 +236,8 @@
                     - Generates a random integer between
                     &lt;arg1&gt; and &lt;arg2&gt;.
                 </td>
-                <td></td>
+                <td>.rand 10 99</td>
                 <td>rand</td>
-            </tr>
-            <tr>
-                <td>.redditor</td>
-                <td>Show information about the given Redditor</td>
-                <td></td>
-                <td>reddit-info</td>
             </tr>
             <tr>
                 <td>.search</td>
@@ -254,20 +248,20 @@
             <tr>
                 <td>.seen</td>
                 <td>Reports when and where the user was last seen.</td>
-                <td></td>
+                <td>.seen example</td>
                 <td>seen</td>
             </tr>
             <tr>
                 <td>.tmask</td>
                 <td>Set the mask to use for .topic in the current channel. %s is used to allow substituting in chunks of text.</td>
                 <td></td>
-                <td>adminchannel</td>
+                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.showmask</td>
                 <td>Show the topic mask for the current channel.</td>
                 <td></td>
-                <td>adminchannel</td>
+                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.spellcheck</td>
@@ -297,7 +291,7 @@
                 <td>.topic</td>
                 <td>This gives ops the ability to change the topic.</td>
                 <td></td>
-                <td>adminchannel</td>
+                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.translate</td>
@@ -309,13 +303,13 @@
                 <td>.unban</td>
                 <td>This give admins the ability to unban a user.<br />The bot must be a Channel Operator for this command to work.</td>
                 <td></td>
-                <td>adminchannel</td>
+                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.unquiet</td>
                 <td>This gives admins the ability to unquiet a user.<br />The bot must be a Channel Operator for this command to work</td>
                 <td></td>
-                <td>adminchannel</td>
+                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.setchanneltz</td>
