@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8"/>
+<title>Documentation - ZppixBot</title>
+<link rel="stylesheet" href="css/common.css">
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="documentation.html">Documentation</a>
+  <a href="contribs.html">Contributors</a>
+  <a href="about.html">About</a>
+  <a href="wiki/index.php/Source_Code">Source Code</a>
+  <a class="active" href="deploy.html">Deployers' Guide</a>
+</div>
+<h1 id="deploy-code">Deploying new code</h1>
+<h2 id="push-dev">Pushing to dev</h2>
+Create a new branch with your changes and then create a PR to push to 'dev'
+Push the changes to the 'dev' branch
+Restart the bot
+<h2 id="test-changes">Test your change</h2>
+Test your change and keep updating the branch for change
+Push every change from your new branch to 'dev'
+<h2 id="push-live">Push to the live bot</h2>
+Push your change to the 'master' branch from the branch created for your change
+Restart the bot and test nothing else has broken
+<h2 id="update-branches">Update working branches</h2>
+Update all other braches with the new change
+Delete the working branch you created for your change
+
+Your change is now deployed across the cluster and on all development branches.
+</html>
