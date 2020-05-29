@@ -26,356 +26,791 @@
     <h1 id="commands-list">List of commands</h1>
     <table>
         <thead>
-            <tr>
-                <th>Commands</th>
-                <th>Purpose</th>
-                <th>Example</th>
-                <th>Module</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>.accesslevel</td>
-                <td>Shows what level of access you have.</td>
-                <td>.accesslevel Example</td>
-                <td>adminlist</td>
+             <tr>
+                <td>.join</td>
+                <td>Join the specified channel. This is an admin-only command.</td>
+                <td><code>.join #example</code></td>
+                <td>admin</td>
             </tr>
             <tr>
-                <td>.ban</td>
-                <td>Allows you to ban a user from the channel you are in</td>
-                <td>.ban Example</td>
-                <td>channelmgmt</td>
-            </tr>
-            <tr>
-                <td>.blocks</td>
-                <td>Manage ZppixBot&#39;s blocking features.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Making-Sopel-ignore-people">https://github.com/sopel-irc/sopel/wiki/Making-Sopel-ignore-people</a></td>
-                <td>.blocks add nick somenickhere</td>
-                <td>coretasks</td>
-            </tr>
-            <tr>
-                <td>.c</td>
-                <td>Google calculator.</td>
-                <td>.c 5 + 3</td>
-                <td>calc</td>
-            </tr>
-            <tr>
-                <td>.chairs</td>
-                <td>Set the meeting chairs.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.chairs Tyrope Jason elad</td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.commands</td>
-                <td>Return a list of ZppixBot&#39;s commands</td>
-                <td>.commands</td>
-                <td>help</td>
-            </tr>
-            <tr>
-                <td>.duck</td>
-                <td>Queries Duck Duck Go for the specified input.</td>
-                <td>.duck wikipedia</td>
-                <td>search</td>
-            </tr>
-            <tr>
-                <td>.endmeeting</td>
-                <td>End a meeting.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.endmeeting</td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.ety</td>
-                <td>Look up the etymology of a word</td>
-                <td>.ety word</td>
-                <td>etymology</td>
-            </tr>
-            <tr>
-                <td>.countdown</td>
-                <td>
-                    .countdown &lt;year&gt; &lt;month&gt; &lt;day&gt;
-                    - displays a countdown to a given date.
-                </td>
-                <td>.countdown 2019 09 01</td>
-                <td>countdown</td>
-            </tr>
-            <tr>
-                <td>.tld</td>
-                <td>Show information about the given Top Level Domain.</td>
-                <td>.tld .com</td>
-                <td>tld</td>
-            </tr>
-            <tr>
-                <td>.task</td>
-                <td>Gives a link to the specified task on Miraheze Phabricator</td>
-                <td>.task 1</td>
-                <td>mh_phab</td>
-            </tr>
-            <tr>
-                <td>.iplookup<br />.ip</td>
-                <td>IP Lookup tool</td>
-                <td>.iplookup 8.8.8.8</td>
-                <td>ip</td>
-            </tr>
-            <tr>
-                <td>.isup</td>
-                <td>isup.me website status checker</td>
-                <td>.isup miraheze.org</td>
-                <td>isup</td>
-            </tr>
-            <tr>
-                <td>.kick</td>
-                <td>Kick a user from the channel.</td>
-                <td>.kick example reason</td>
-                <td>channelmgmt</td>
-            </tr>
-            <tr>
-                <td>.in</td>
-                <td>Gives you a reminder in the given amount of time.</td>
-                <td>.in 3h45m Release a new version of ZppixBot</td>
-                <td>reminders</td>
-            </tr>
-            <tr>
-                <td>.at</td>
-                <td>Gives you a reminder at the given time. Time format: hh:mm:ss. To see what timezone is used, type .getchanneltz (if setting a reminder in a IRC channel) or .gettz (elsewhere)</td>
-                <td>.at 13:47 Update the servers!</td>
-                <td>reminders</td>
-            </tr>
-            <tr>
-                <td>.cancelreminder</td>
-                <td>Pings the bot operators to cancel a reminder that you no longer need.</td>
-                <td>.cancelreminder (insert reminder message here)</td>
-                <td>reminders</td>
-            </tr>
-            <tr>
-                <td>.miraheze</td>
-                <td>This command will tell you about Miraheze and where to learn more</td>
+                <td>.me</td>
+                <td>Send an ACTION (/me) to a given channel or nick. Can only be done in<br>privmsg by an admin.</td>
                 <td></td>
-                <td>miraheze</td>
+                <td>admin</td>
             </tr>
             <tr>
-                <td>.gethelp</td>
-                <td>Pings Miraheze admins, prompting to help a user that needs help.</td>
-                <td>.gethelp I cannot access https://www.meta.miraheze.org</td>
-                <td>miraheze</td>
-            </tr>
-            <tr>
-                <td>.python</td>
-                <td>Tells you what version of Python ZppixBot is running.</td>
-                <td>.python</td>
-                <td>pyver</td>
-            </tr>
-            <tr>
-                <td>.kickban<br />.kb</td>
-                <td>This gives admins the ability to kickban a user.<br />The bot must be a Channel Operator for this command to work</td>
-                <td>.kickban [#chan] user1 user!<em>@</em> get out of here</td>
-                <td>channelmgmt</td>
-            </tr>
-            <tr>
-                <td>.mangle</td>
-                <td>Repeatedly translate the input until it makes no sense.</td>
-                <td>.mangle this is a sentence</td>
-                <td>translate</td>
-            </tr>
-            <tr>
-                <td>.action</td>
-                <td>Log an action in the meeting log<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.action elad will develop a meetbot</td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.agreed</td>
-                <td>Log an agreement in the meeting log.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.agreed bowties are not cool</td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.info</td>
-                <td>Log an informational item in the meeting log<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.info all board members present</td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.link</td>
-                <td>Log a link in the meeting log.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.link <a href="http://example.com">http://example.com</a></td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.subject</td>
-                <td>Change the meeting subject.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.subject roll call</td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.movie</td>
-                <td>Returns some information about a movie, like Title, Year, Rating, Genre and IMDB Link.</td>
-                <td>.movie Movie Title</td>
-                <td>movie</td>
+                <td>.mode</td>
+                <td>Set a user mode on Sopel. Can only be done in privmsg by an admin.</td>
+                <td></td>
+                <td>admin</td>
             </tr>
             <tr>
                 <td>.part</td>
                 <td>Part the specified channel. This is an admin-only command.</td>
-                <td>.part #example</td>
+                <td><code>.part #example</code></td>
                 <td>admin</td>
-            </tr>
-            <tr>
-                <td>.quiet</td>
-                <td>This gives admins the ability to quiet a user.<br />The bot must be a Channel Operator for this command to work</td>
-                <td>.quiet Example</td>
-                <td>channelmgmt</td>
             </tr>
             <tr>
                 <td>.quit</td>
                 <td>Quit from the server. This is an owner-only command.</td>
-                <td>.quit</td>
+                <td></td>
                 <td>admin</td>
             </tr>
             <tr>
-                <td>.rand</td>
-                <td>
-                    .rand &lt;arg1&gt; &lt;arg2&gt;
-                    - Generates a random integer between
-                    &lt;arg1&gt; and &lt;arg2&gt;.
-                </td>
-                <td>.rand 10 99</td>
-                <td>rand</td>
+                <td>.restart</td>
+                <td>Restart the bot. This is an owner-only command.</td>
+                <td></td>
+                <td>admin</td>
             </tr>
             <tr>
-                <td>.search</td>
-                <td>Searches Google, Bing, and Duck Duck Go.</td>
-                <td>.search nerdfighter</td>
-                <td>search</td>
+                <td>.save</td>
+                <td>Save state of Sopel's config object to the configuration file.</td>
+                <td><code>.save</code></td>
+                <td>admin</td>
             </tr>
             <tr>
-                <td>.seen</td>
-                <td>Reports when and where the user was last seen.</td>
-                <td>.seen example</td>
-                <td>seen</td>
+                <td>.say<br>.msg</td>
+                <td>Send a message to a given channel or nick. Can only be done in privmsg by<br>an admin.</td>
+                <td><code>.say #YourPants Does anyone else smell neurotoxin?</code></td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>.set</td>
+                <td>See and modify values of Sopel's config object.<br><br>Trigger args:<br> arg1 - section and option, in the form &quot;section.option&quot;<br> arg2 - value<br><br>If there is no section, section will default to &quot;core&quot;.<br>If value is not provided, the current value will be displayed.</td>
+                <td><code>.set core.owner MyNick</code></td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>.tmpjoin</td>
+                <td>Like <code>join</code>, without saving. This is an admin-only command.<br><br>Unlike the <code>join</code> command, <code>tmpjoin</code> won't remember the channel upon<br>restarting the bot.</td>
+                <td><code>.tmpjoin #example</code></td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>.tmppart</td>
+                <td>Like <code>part</code>, without saving. This is an admin-only command.<br><br>Unlike the <code>part</code> command, <code>tmppart</code> will rejoin the channel upon<br>restarting the bot.</td>
+                <td><code>.tmppart #example</code></td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>.unset</td>
+                <td>Unset value of Sopel's config object.<br><br>Unsetting a value will reset it to the default specified in the config<br>definition.<br><br>Trigger args:<br> arg1 - section and option, in the form &quot;section.option&quot;<br><br>If there is no section, section will default to &quot;core&quot;.</td>
+                <td><code>.unset core.owner</code></td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>.accesslevel<br>.access</td>
+                <td>Tell user what access level they have for the bot.</td>
+                <td></td>
+                <td>adminlist</td>
+            </tr>
+            <tr>
+                <td>.botadmins<br>.admins</td>
+                <td>Provide the list of bot admins.</td>
+                <td></td>
+                <td>adminlist</td>
+            </tr>
+            <tr>
+                <td>.announce</td>
+                <td>Send an announcement to all channels the bot is in</td>
+                <td><code>.announce Some important message here</code></td>
+                <td>announce</td>
+            </tr>
+            <tr>
+                <td>.c<br>.calc</td>
+                <td>Evaluate some calculation.</td>
+                <td><code>.c 5 / 2</code></td>
+                <td>calc</td>
+            </tr>
+            <tr>
+                <td>.ban</td>
+                <td><em>No documentation found.</em></td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.deop</td>
+                <td>Command to deop users in a room. If no nick is given, Sopel will deop the nick who sent the command</td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.devoice</td>
+                <td>Command to devoice users in a room. If no nick is given, the nick who sent the command will be devoiced</td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.invite</td>
+                <td>Command to invite users to a room.</td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.kick</td>
+                <td>Kick a user from the channel.</td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.kickban<br>.kb</td>
+                <td>Kick and ban a user from the channel. The bot must be a channel operator for this command to work.<br></td>
+                <td><code>.kickban [#chan] user1 user!*@* get out of here</code></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.op</td>
+                <td>Command to op users in a room. If no nick is given, Sopel will op the nick who sent the command</td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.quiet</td>
+                <td>Quiet a user. The bot must be a channel operator for this command to work.<br></td>
+                <td></td>
+                <td>channelmgnt</td>
             </tr>
             <tr>
                 <td>.tmask</td>
-                <td>Set the mask to use for .topic in the current channel. %s is used to allow substituting in chunks of text.</td>
+                <td>Set the topic mask to use for the current channel. Within the topic mask, {} is used to allow substituting in chunks of text. This mask is used when running the 'topic' command.<br></td>
                 <td></td>
-                <td>channelmgmt</td>
+                <td>channelmgnt</td>
             </tr>
             <tr>
                 <td>.showmask</td>
                 <td>Show the topic mask for the current channel.</td>
                 <td></td>
-                <td>channelmgmt</td>
-            </tr>
-            <tr>
-                <td>.spellcheck</td>
-                <td>Says whether the given word is spelled correctly, and gives suggestions if it&#39;s not.</td>
-                <td>.spellcheck stuff</td>
-                <td>spellcheck</td>
-            </tr>
-            <tr>
-                <td>.startmeeting</td>
-                <td>Start a meeting.<br /><a href="https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module">https://github.com/sopel-irc/sopel/wiki/Using-the-meetbot-module</a></td>
-                <td>.startmeeting title or .startmeeting</td>
-                <td>meetbot</td>
-            </tr>
-            <tr>
-                <td>.suggest</td>
-                <td>Suggest terms starting with given input</td>
-                <td></td>
-                <td>search</td>
-            </tr>
-            <tr>
-                <td>.t</td>
-                <td>Returns the current time.</td>
-                <td>.t UTC</td>
-                <td>clock</td>
+                <td>channelmgnt</td>
             </tr>
             <tr>
                 <td>.topic</td>
-                <td>This gives ops the ability to change the topic.</td>
+                <td>Change the channel topic. The bot must be a channel operator for this command to work.<br></td>
                 <td></td>
-                <td>channelmgmt</td>
+                <td>channelmgnt</td>
             </tr>
             <tr>
-                <td>.translate</td>
-                <td>Translates a phrase, with an optional language hint.</td>
+                <td>.unban</td>
+                <td>Unban a user from the channel. The bot must be a channel operator for this command to work.<br></td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.unquiet</td>
+                <td>Unquiet a user. The bot must be a channel operator for this command to work.<br></td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.voice</td>
+                <td>Command to voice users in a room. If no nick is given, Sopel will voice the nick who sent the command</td>
+                <td></td>
+                <td>channelmgnt</td>
+            </tr>
+            <tr>
+                <td>.choose<br>.ch<br>.choice</td>
+                <td>.choice option1|option2|option3 - Makes a difficult choice easy.</td>
+                <td><code>.choose a</code></td>
+                <td>choose</td>
+            </tr>
+            <tr>
+                <td>.t<br>.time</td>
+                <td>Return the current time.<br><br>The command takes an optional parameter: it will try to guess if it's a<br>nick, a channel, or a timezone (in that order).<br><br>If it's a known nick or channel but there is no configured timezone, then<br>it will complain. If nothing can be found, it'll complain that the argument<br>is not a valid timezone.<br><br>.. seealso::<br><br> Function :func:<code>~sopel.tools.time.format_time</code> is used to format<br> the current datetime according to the timezone (if found).</td>
+                <td><code>.t #sopel</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.tz<br>.timez</td>
+                <td>Return the current time in a timezone.<br><br>Unlike the <code>.t</code> command, it requires an argument, and that argument<br>must be a valid timezone.</td>
+                <td><code>.tz America/New_York</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.getchanneltimeformat<br>.getctf</td>
+                <td>Gets the channel's preferred time format; will return current channel's if<br>no channel name is given.</td>
+                <td><code>.getctf [channel]</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.getchanneltz<br>.getctz</td>
+                <td>Gets the channel's preferred timezone; returns the current channel's<br>if no channel name is given.</td>
+                <td><code>.getctz [channel]</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.gettimeformat<br>.gettf</td>
+                <td>Gets a user's preferred time format; will show yours if no user specified.</td>
+                <td><code>.gettf [nick]</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.gettz<br>.gettimezone</td>
+                <td>Gets a user's preferred time zone; will show yours if no user specified.</td>
+                <td><code>.gettz [nick]</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.setchanneltz<br>.setctz</td>
+                <td>Set the preferred timezone for the channel.</td>
+                <td><code>.setctz America/New_York</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.setchanneltimeformat<br>.setctf</td>
+                <td>Sets your preferred format for time. Uses the standard strftime format. You<br>can use <a href="http://strftime.net">http://strftime.net</a> or your favorite search engine to learn more.</td>
+                <td><code>.setctf %Y-%m-%dT%T%z</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.settz<br>.settimezone</td>
+                <td>Set your preferred timezone.<br><br>Most timezones will work, but it's best to use one from<br><a href="https://sopel.chat/tz">https://sopel.chat/tz</a>.</td>
+                <td><code>.settz America/New_York</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.settimeformat<br>.settf</td>
+                <td>Sets your preferred format for time. Uses the standard strftime format. You<br>can use <a href="http://strftime.net">http://strftime.net</a> or your favorite search engine to learn more.</td>
+                <td><code>.settf %Y-%m-%dT%T%z</code></td>
+                <td>clock</td>
+            </tr>
+            <tr>
+                <td>.countdown</td>
+                <td>.countdown <year> <month> <day> - displays a countdown to a given date.</td>
+                <td></td>
+                <td>countdown</td>
+            </tr>
+            <tr>
+                <td>.cur<br>.currency<br>.exchange</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.cur 100 usd in btc cad eur can aux</code></td>
+                <td>currency</td>
+            </tr>
+            <tr>
+                <td>.d<br>.dice<br>.roll</td>
+                <td>.dice XdY[vZ][+N][#COMMENT], rolls dice and reports the result.<br><br>X is the number of dice. Y is the number of faces in the dice. Z is the<br>number of lowest dice to be dropped from the result. N is the constant to<br>be applied to the end result. Comment is for easily noting the purpose.</td>
+                <td><code>.roll 1d6 # initiative</code></td>
+                <td>dice</td>
+            </tr>
+            <tr>
+                <td>.afraid</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.afraid</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.rage<br>.anger</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.anger</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.crazy</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.crazy</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.cry</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.cry</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.happy</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.happy</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.hungry</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.hungry</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.lenny</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.lenny</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.love</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.love</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.shrug</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.shrug</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.sick</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.sick</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.success<br>.winner</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.winner</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.surprised</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.surprised</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.tableflip<br>.tflip</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.tflip</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.unflip</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.unflip</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.confused<br>.wat</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.wat</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.worried</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.worried</code></td>
+                <td>emoticons</td>
+            </tr>
+            <tr>
+                <td>.ety</td>
+                <td>Look up the etymology of a word</td>
+                <td><code>.ety word</code></td>
+                <td>etymology</td>
+            </tr>
+            <tr>
+                <td>.help<br>.commands</td>
+                <td>Shows a command's documentation, and an example if available. With no arguments, lists all commands.</td>
+                <td><code>.help tell</code></td>
+                <td>help</td>
+            </tr>
+            <tr>
+                <td>.invite</td>
+                <td>Invite the given user to the current channel, or (with optional<br>second argument) another channel that Sopel is in.</td>
+                <td><code>.invite converge #sopel</code></td>
+                <td>invite</td>
+            </tr>
+            <tr>
+                <td>.iplookup<br>.ip</td>
+                <td>IP Lookup tool</td>
+                <td><code>.ip 8.8.8.8</code></td>
+                <td>ip</td>
+            </tr>
+            <tr>
+                <td>.isup</td>
+                <td>Check if a website is up or not.</td>
+                <td></td>
+                <td>isup</td>
+            </tr>
+            <tr>
+                <td>.isupinsecure</td>
+                <td>Check if a website is up (without verifying HTTPS).</td>
+                <td></td>
+                <td>isup</td>
+            </tr>
+            <tr>
+                <td>.joinall</td>
+                <td>Join some channels.</td>
+                <td></td>
+                <td>join</td>
+            </tr>
+            <tr>
+                <td>.lmgtfy<br>.lmgify<br>.gify<br>.gtfy</td>
+                <td>Let me just… Google that for you.</td>
+                <td><code>.lmgtfy</code></td>
+                <td>lmgtfy</td>
+            </tr>
+            <tr>
+                <td>.chairs</td>
+                <td>Set the meeting chairs. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.chairs Tyrope Jason elad</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.endmeeting</td>
+                <td>End a meeting. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.endmeeting</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.listactions</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.listactions</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.action</td>
+                <td>Log an action in the meeting log. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.action elad will develop a meetbot</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.agreed</td>
+                <td>Log an agreement in the meeting log. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.agreed Bowties are cool</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.info</td>
+                <td>Log an informational item in the meeting log. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.info all board members present</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.link</td>
+                <td>Log a link in the meeing log. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.link http://example.com</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.subject</td>
+                <td>Change the meeting subject. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.subject roll call</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.comments</td>
+                <td>Show the comments that have been logged for this meeting with .comment.<br><br>See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.startmeeting</td>
+                <td>Start a meeting. See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td><code>.startmeeting Meeting Title</code></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.comment</td>
+                <td>Log a comment, to be shown with other comments when a chair uses .comments.<br>Intended to allow commentary from those outside the primary group of people<br>in the meeting.<br><br>Used in private message only, as <code>.comment &lt;#channel&gt; &lt;comment to add&gt;</code><br><br>See <a href="{%%20link%20_usage/meetbot-plugin.md%20%}">meetbot module usage</a></td>
+                <td></td>
+                <td>meetbot</td>
+            </tr>
+            <tr>
+                <td>.priotasks</td>
+                <td>Command to find high priority tasks whithout updates for a while.</td>
+                <td><code>.priotasks 2</code></td>
+                <td>mh_phab</td>
+            </tr>
+            <tr>
+                <td>.task</td>
+                <td>Get a Miraheze phabricator link to a the task number you provide.</td>
+                <td><code>.task 1</code></td>
+                <td>mh_phab</td>
+            </tr>
+            <tr>
+                <td>.miraheze</td>
+                <td>Miraheze about command.<br><br>This command will tell you about Miraheze and where to learn more.</td>
+                <td><code>.miraheze</code></td>
+                <td>miraheze</td>
+            </tr>
+            <tr>
+                <td>.discord</td>
+                <td>Displays discord information for Miraheze.</td>
+                <td></td>
+                <td>miraheze</td>
+            </tr>
+            <tr>
+                <td>.gethelp</td>
+                <td>Reply to help requests.</td>
+                <td><code>.gethelp I cannot access https://meta.miraheze.org</code></td>
+                <td>miraheze</td>
+            </tr>
+            <tr>
+                <td>.ping</td>
+                <td>Reply to ping command.</td>
+                <td></td>
+                <td>ping</td>
+            </tr>
+            <tr>
+                <td>.pronouns</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.pronouns Embolalia</code></td>
+                <td>pronouns</td>
+            </tr>
+            <tr>
+                <td>.setpronouns</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.setpronouns they/them/their/theirs/themselves</code></td>
+                <td>pronouns</td>
+            </tr>
+            <tr>
+                <td>.py</td>
+                <td>Evaluate a Python expression.</td>
+                <td><code>.py len([1,2,3])</code></td>
+                <td>py</td>
+            </tr>
+            <tr>
+                <td>.rand</td>
+                <td>Replies with a random number between first and second argument.</td>
+                <td><code>.rand 10 99</code></td>
+                <td>rand</td>
+            </tr>
+            <tr>
+                <td>.load</td>
+                <td>Wrapper for allowing delivery of .load command via PM</td>
+                <td></td>
+                <td>reload</td>
+            </tr>
+            <tr>
+                <td>.reload</td>
+                <td>Wrapper for allowing delivery of .reload command via PM</td>
+                <td></td>
+                <td>reload</td>
+            </tr>
+            <tr>
+                <td>.update</td>
+                <td>Wrapper for allowing delivery of .update command via PM</td>
+                <td></td>
+                <td>reload</td>
+            </tr>
+            <tr>
+                <td>.at</td>
+                <td>Gives you a reminder at the given time.<br><br>Takes <code>hh:mm:ssTimezone Date message</code> where seconds, Timezone, and Date<br>are optional.<br><br>Timezone is any timezone Sopel takes elsewhere; the best choices are those<br>from the tzdb; a list of valid options is available at<br><a href="https://sopel.chat/tz">https://sopel.chat/tz</a>.<br><br>The Date can be expressed in one of these formats: YYYY-mm-dd, dd-mm-YYYY,<br>dd-mm-YY, or dd-mm. The separator can be <code>.</code>, <code>-</code>, or <code>/</code>.</td>
+                <td><code>.at 00:01 25/12 Open your gift!</code></td>
+                <td>remind</td>
+            </tr>
+            <tr>
+                <td>.in</td>
+                <td>Gives you a reminder in the given amount of time.</td>
+                <td><code>.in 3h45m Go to class</code></td>
+                <td>remind</td>
+            </tr>
+            <tr>
+                <td>.addchannel</td>
+                <td>Reply to channel request message.</td>
+                <td><code>.addchannel (insert which)</code></td>
+                <td>responses</td>
+            </tr>
+            <tr>
+                <td>.botversion<br>.bv</td>
+                <td>List the current version of the bot.</td>
+                <td><code>.botversion</code></td>
+                <td>responses</td>
+            </tr>
+            <tr>
+                <td>.cancelreminder</td>
+                <td>Cancel reminder.</td>
+                <td><code>.cancelreminder (insert reminder message here)</code></td>
+                <td>responses</td>
+            </tr>
+            <tr>
+                <td>.source<br>.botsource</td>
+                <td>Give the link to ZppixBot's Github.</td>
+                <td><code>.source</code></td>
+                <td>responses</td>
+            </tr>
+            <tr>
+                <td>.gj<br>.gw</td>
+                <td>Tell the user that they are doing good work.</td>
+                <td><code>.gj (nick)</code></td>
+                <td>responses</td>
+            </tr>
+            <tr>
+                <td>.bing</td>
+                <td>Queries Bing for the specified input.</td>
+                <td><code>.bing sopel irc bot</code></td>
+                <td>search</td>
+            </tr>
+            <tr>
+                <td>.duck<br>.ddg<br>.g</td>
+                <td>Queries DuckDuckGo for the specified input.</td>
+                <td><code>.duck sopel.chat irc bot</code></td>
+                <td>search</td>
+            </tr>
+            <tr>
+                <td>.search</td>
+                <td>Searches both Bing and DuckDuckGo.</td>
+                <td><code>.search sopel irc bot</code></td>
+                <td>search</td>
+            </tr>
+            <tr>
+                <td>.suggest</td>
+                <td>Suggests terms starting with given input</td>
+                <td><code>.suggest lkashdfiauwgeaef</code></td>
+                <td>search</td>
+            </tr>
+            <tr>
+                <td>.seen</td>
+                <td>Reports when and where the user was last seen.</td>
+                <td></td>
+                <td>seen</td>
+            </tr>
+            <tr>
+                <td>.github<br>.gh</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.github user</code></td>
+                <td>shortlinks</td>
+            </tr>
+            <tr>
+                <td>.mhca</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.mhca example</code></td>
+                <td>shortlinks</td>
+            </tr>
+            <tr>
+                <td>.mh</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.mh wiki page</code></td>
+                <td>shortlinks</td>
+            </tr>
+            <tr>
+                <td>.subred</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.subred example</code></td>
+                <td>shortlinks</td>
+            </tr>
+            <tr>
+                <td>.redditu</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.redditu example</code></td>
+                <td>shortlinks</td>
+            </tr>
+            <tr>
+                <td>.tw</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.tw user</code></td>
+                <td>shortlinks</td>
+            </tr>
+            <tr>
+                <td>.wmca</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.wmca example</code></td>
+                <td>shortlinks</td>
+            </tr>
+            <tr>
+                <td>.status</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.status mhtest offline</code></td>
+                <td>status</td>
+            </tr>
+            <tr>
+                <td>.tell<br>.ask</td>
+                <td>Give someone a message the next time they're seen</td>
+                <td><code>Sopel, tell dgw he broke something again.</code></td>
+                <td>tell</td>
+            </tr>
+            <tr>
+                <td>.tld</td>
+                <td>Show information about the given Top Level Domain.</td>
+                <td><code>.tld ru</code></td>
+                <td>tld</td>
+            </tr>
+            <tr>
+                <td>.mangle<br>.mangle2</td>
+                <td>Repeatedly translate the input until it makes absolutely no sense.</td>
                 <td></td>
                 <td>translate</td>
             </tr>
             <tr>
-                <td>.unban</td>
-                <td>This give admins the ability to unban a user.<br />The bot must be a Channel Operator for this command to work.</td>
+                <td>.translate<br>.tr</td>
+                <td>Translates a phrase, with an optional language hint.</td>
+                <td><code>.tr mon chien</code></td>
+                <td>translate</td>
+            </tr>
+            <tr>
+                <td>.u</td>
+                <td>Look up a Unicode character or a hexadecimal code point.</td>
+                <td><code>.u 203D</code></td>
+                <td>unicode_info</td>
+            </tr>
+            <tr>
+                <td>.length<br>.distance</td>
+                <td>Convert distances</td>
+                <td><code>.length 3 parsec</code></td>
+                <td>units</td>
+            </tr>
+            <tr>
+                <td>.weight<br>.mass</td>
+                <td>Convert mass</td>
                 <td></td>
-                <td>channelmgmt</td>
+                <td>units</td>
             </tr>
             <tr>
-                <td>.unquiet</td>
-                <td>This gives admins the ability to unquiet a user.<br />The bot must be a Channel Operator for this command to work</td>
+                <td>.temp</td>
+                <td>Convert temperatures</td>
+                <td><code>.temp 100K</code></td>
+                <td>units</td>
+            </tr>
+            <tr>
+                <td>.uptime</td>
+                <td>.uptime - Returns the uptime of Sopel.</td>
                 <td></td>
-                <td>channelmgmt</td>
+                <td>uptime</td>
             </tr>
             <tr>
-                <td>.setchanneltz</td>
-                <td>Set the preferred time zone for the channel.</td>
-                <td></td>
-                <td>clock</td>
+                <td>.title</td>
+                <td>Show the title or URL information for the given URL, or the last URL seen<br>in this channel.</td>
+                <td><code>.title http://google.com</code></td>
+                <td>urls</td>
             </tr>
             <tr>
-                <td>.setchanneltimeformat</td>
-                <td>Sets your preferred format for time. Uses the standard strftime format. You can use <a href="http://strftime.net">http://strftime.net</a> or your favorite search engine to learn more.</td>
-                <td>.setchanneltimeformat %FT%T%z</td>
-                <td>clock</td>
-            </tr>
-            <tr>
-                <td>.settz</td>
-                <td>Set your preferred time zone. Most timezones will work, but it&#39;s best to use one from <a href="http://dft.ba/-tz">http://dft.ba/-tz</a></td>
-                <td></td>
-                <td>clock</td>
-            </tr>
-            <tr>
-                <td>.settimeformat</td>
-                <td>Sets your preferred format for time. Uses the standard strftime format. You can use <a href="http://strftime.net">http://strftime.net</a> or your favorite search engine to learn more.</td>
-                <td>.settimeformat %FT%T%z</td>
-                <td>clock</td>
-            </tr>
-            <tr>
-                <td>.setlocation</td>
-                <td>Set your default weather location.</td>
-                <td>.setlocation Columbus, OH</td>
-                <td>weather</td>
+                <td>.url</td>
+                <td>Allow a bot admin to modify the url blacklist. Accepts <code>ban</code>, <code>allow</code> and <code>match</code> as parameters.</td>
+                <td><code>.url ban http://google.com</code></td>
+                <td>urls</td>
             </tr>
             <tr>
                 <td>.version</td>
-                <td>Tells you what version of Sopel ZppixBot is running.</td>
+                <td>Display the latest commit version, if Sopel is running in a git repo.</td>
                 <td></td>
                 <td>version</td>
             </tr>
             <tr>
-                <td>.weather</td>
-                <td>.weather location - Show the weather at the given location.</td>
-                <td>.weather London</td>
-                <td>weather</td>
+                <td>.add_known<br>.adduser</td>
+                <td>Add user to known users list.</td>
+                <td><code>.add_known Zppix #miraheze or .adduser Zppix #miraheze</code></td>
+                <td>welcome</td>
             </tr>
             <tr>
-                <td>.w</td>
-                <td>Look up something on Wikipedia</td>
-                <td></td>
+                <td>.w<br>.wiki<br>.wik</td>
+                <td><em>No documentation found.</em></td>
+                <td><code>.w San Francisco</code></td>
                 <td>wikipedia</td>
             </tr>
             <tr>
-                <td>.wt</td>
+                <td>.wt<br>.define<br>.dict</td>
                 <td>Look up a word on Wiktionary.</td>
-                <td>.wt bailiwick</td>
+                <td><code>.wt bailiwick</code></td>
                 <td>wiktionary</td>
             </tr>
             <tr>
                 <td>.xkcd</td>
-                <td>.xkcd - Finds an xkcd comic strip. Takes one of 3 inputs:<br />If no input is provided it will return a random comic<br />If numeric input is provided it will return that comic<br />If non-numeric input is provided it will return the first google result for those keywords on the xkcd.com site</td>
+                <td>.xkcd - Finds an xkcd comic strip.<br><br>Takes one of 3 inputs:<br><br> * If no input is provided it will return a random comic<br> * If numeric input is provided it will return that comic, or the<br> nth-latest comic if the number is non-positive<br> * If non-numeric input is provided it will return the first search result<br> for those keywords on the xkcd.com site</td>
                 <td></td>
                 <td>xkcd</td>
             </tr>
             <tr>
-                <td>.add_known<br />.adduser</td>
-                <td>.add_known &lt;username&gt; &lt;channel&gt; - will add username to known users list. Users from this list will not be welcomed upon joining the channel</td>
-                <td>.add_known Zppix #miraheze</td>
-                <td>welcome</td>
+                <td>.blocks</td>
+                <td>Manage Sopel's blocking features. See <a href="{%%20link%20_usage/ignoring-people.md%20%}">ignore system documentation</a>.</td>
+                <td></td>
+                <td>coretasks</td>
+            </tr>
+            <tr>
+                <td>.useserviceauth</td>
+                <td><em>No documentation found.</em></td>
+                <td></td>
+                <td>coretasks</td>
+            </tr>
+            <tr>
+                <td>.execute</td>
+                <td>Execute commands specified to perform on IRC server connect.</td>
+                <td></td>
+                <td>coretasks</td>
             </tr>
         </tbody>
     </table>
