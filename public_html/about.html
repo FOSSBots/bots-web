@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<title>About - ZppixBot</title>
-<link rel="stylesheet" href="css/common.css">
-<div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="documentation.html">Documentation</a>
-  <a href="contribs.html">Contributors</a>
-  <a class="active" href="about.html">About</a>
-  <a href="wiki/index.php/Source_Code">Source Code</a>
-</div>
-<h1>About</h1>
-ZppixBot is an IRC bot running <a href="https://sopel.chat">Sopel</a> 7.0.4 and Python 3.5.3. The current release of ZppixBot customizations is version 6.0. ZppixBot has lots of commands and more can be added by writing more mo$
+<html lang="en">
+    <head>
+        <title>About - ZppixBot</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://tools-static.wmflabs.org/fontcdn/css?family=Roboto:100,300" rel="stylesheet" type="text/css">
+        <link href="https://tools-static.wmflabs.org/fontcdn/css?family=Roboto+Mono" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="Font-Awesome/css/all.css">
+        <script>
+            function myFunction() {
+                var x = document.getElementById("nav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topnav" id="nav">
+            <img src="logo.png" alt="ZppixBot Logo" width="48" height="48" style="float:left;vertical-align:middle;margin:0px 10px">
+            <a href="index.html">Home</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="contribs.html">Contributors</a>
+            <a class="active" href="about.html">About</a>
+            <a href="wiki/index.php/Source_Code">Source Code</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+        </div>
+        <div class="content">
+            <h1>About</h1>
+            ZppixBot is an IRC bot running <a href="https://sopel.chat">Sopel</a> 7.0.4 and Python 3.5.3. The current release of ZppixBot customizations is version 6.0. ZppixBot has lots of commands and more can be added by writing more.
+        </div>
+    </body>
 </html>
