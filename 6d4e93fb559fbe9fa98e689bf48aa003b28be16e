@@ -1,0 +1,276 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f916f2f_3d7a59f5",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "Fixed the font size",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7fa3ee6_c911c15e",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This is a more material and cleaner font",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b2a9cdd_b53e8347",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "Add a colour for the text by default",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f98995c_1a96cc39",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "149b01c6_fdeab240",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd319d08_40839cad",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f416e4c_5d093569",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ea8f3377_89525925",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This is the material font",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f606f9a3_2bf675c8",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "557606c9_5e1bb79c",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "Fixed the font size to a more appropiate one",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "88c1f19c_a8635a4f",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0de6c750_a532a2da",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e255b8da_2f0c89ed",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b78ed5e4_3f17079b",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "I\u0027ve fixed this to the hex of the best fitting colour for the background",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1de3859_0812cdac",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "This colour is the material design equivalent",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "968dd5df_d75f40ab",
+        "filename": "public_html/css/common.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 7023
+      },
+      "writtenOn": "2020-06-03T10:21:28Z",
+      "side": 1,
+      "message": "I\u0027ve fixed this to the hex of the best fitting colour for the background",
+      "revId": "6d4e93fb559fbe9fa98e689bf48aa003b28be16e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
