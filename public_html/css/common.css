@@ -1,20 +1,21 @@
 html {
-    font-family: 'Times New Roman';
+    font-size: 16px;
 }
 
 body {
-    margin: 8px;
+    font-family: 'Roboto', sans-serif;
+    color: #212121
 }
 
 h1 {
     font-weight: normal;
     display: block;
-    border-bottom: 1px solid #a2a9b1;
+    border-bottom: 1px solid #aeaeae;
 }
 
 a {
     text-decoration: none;
-    color: #0645ad;
+    color: #1976d2;
 }
 
 table {
@@ -22,11 +23,11 @@ table {
 }
 
 th {
-    background-color: #ebebeb;
+    background-color: #f5f5f5;
 }
 
 tr:nth-child(even) {
-    background-color: #f5f5f5;
+    background-color: #eeeeee;
 }
 
 th, td {
@@ -35,34 +36,35 @@ th, td {
 
 pre {
     padding: 1em;
-    font-family: monospace;
-    background-color: #f5f5f5;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #eeeeee;
     white-space: pre-wrap;
+    font-size: 13px;
 }
 
 .topnav {
-    background-color: #333;
+    background-color: #263238;
     overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
+    padding: 14px 16px;
     float: left;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #bdbdbd;
+    color: #000000;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #1faa00;
+    color: #000000;
 }
