@@ -1,4 +1,0 @@
-[submodule "public_html/Font-Awesome"]
-	path = public_html/Font-Awesome
-	url = https://github.com/FortAwesome/Font-Awesome
-	branch = master
