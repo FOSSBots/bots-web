@@ -3,4 +3,5 @@
   "rules": {
 	  "indentation": 4
   }
+  "ignoreFiles": ["public_html/FontAwesome/*.css"],
 }
