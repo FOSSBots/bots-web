@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<title>Home - ZppixBot</title>
-<link rel="stylesheet" href="css/common.css">
-<div class="topnav">
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Home - ZppixBot</title>
+  <link href='https://tools-static.wmflabs.org/fontcdn/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+  <link href='https://tools-static.wmflabs.org/fontcdn/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="Font-Awesome/css/all.css">
+  <script>
+  function myFunction() {
+    var x = document.getElementById("nav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+</head>
+<div class="topnav" id="nav">
   <a class="active" href="index.html">Home</a>
   <a href="documentation.html">Documentation</a>
   <a href="contribs.html">Contributors</a>
   <a href="about.html">About</a>
   <a href="wiki/index.php/Source_Code">Source Code</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
 </div>
 <br/>
-If you would like ZppixBot in your channel, join <a href="irc://chat.freenode.net/#ZppixBot">#ZppixBot</a> and say .addchannel <br/>
+<div class="content">
+  If you would like ZppixBot in your channel, join <a href="irc://chat.freenode.net/#ZppixBot">#ZppixBot</a> and say .addchannel <br/>
 
-<h1> The sixth release of ZppixBot is now here! </h1>
-<p> For more information please check out <a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v6">the release tag</a> !!!<br/>
+  <h1> The sixth release of ZppixBot is now here! </h1>
+  <p> For more information please check out <a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v6">the release tag</a> !!!<br/>
 
-<b>Previous releases</b>:<br/>
-<a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v1">v1 (30 July 2017)</a><br/>
-<a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v2">v2 (8 August 2017)</a><br/>
-<a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v3">v3 (23 December 2017)</a><br/>
-<a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v4">v4 (8 August 2018)</a><br/>
-<a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v5">v5 (27 December 2019)</a><br/>
-<h1> Wiki </h1>
-<p> If you would like to contribute to the <a href="https://zppixbot.toolforge.org/wiki/">ZppixBot wiki</a>, you must request an account, to request an account please PM one of the bot operators.</p>
+  <b>Previous releases</b>:<br/>
+  <a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v1">v1 (30 July 2017)</a><br/>
+  <a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v2">v2 (8 August 2017)</a><br/>
+  <a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v3">v3 (23 December 2017)</a><br/>
+  <a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v4">v4 (8 August 2018)</a><br/>
+  <a href="https://github.com/Pix1234/ZppixBot-Source/releases/tag/v5">v5 (27 December 2019)</a><br/>
+  <h1> Wiki </h1>
+  <p> If you would like to contribute to the <a href="https://zppixbot.toolforge.org/wiki/">ZppixBot wiki</a>, you must request an account, to request an account please PM one of the bot operators.</p>
+</div>
 </html>
