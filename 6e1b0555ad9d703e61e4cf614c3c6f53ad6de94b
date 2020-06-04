@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb02b75a_770f24a0",
+        "filename": ".stylelintrc.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2020-06-04T11:01:48Z",
+      "side": 1,
+      "message": "I gave it a try, and it is super slow. It seems stylelint look at all the files given as argument then filter them out based on ignoreFiles.\n\nThe faster alternative is to instead ignore them in a .stylelintignore file, this way stylelint does not crawl the directory.\n\nSo you should remove that block and instead add a .stylelintignore file containing:\n\n /public_html/Font-Awesome\n\n\nhttps://github.com/stylelint/stylelint/blob/master/docs/user-guide/configure.md#ignorefiles\n\n:)",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 4
+      },
+      "revId": "6e1b0555ad9d703e61e4cf614c3c6f53ad6de94b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
