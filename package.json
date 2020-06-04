@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "stylelint 'public_html/**/*.css'"
+  },
+  "devDependencies": {
+    "stylelint": "^13.5.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

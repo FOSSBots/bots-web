@@ -1,5 +1,5 @@
 html {
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', serif;
 }
 
 body {
@@ -29,7 +29,8 @@ tr:nth-child(even) {
     background-color: #f5f5f5;
 }
 
-th, td {
+th,
+td {
     padding: 0.5em;
 }
 
@@ -63,6 +64,6 @@ pre {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
 }
