@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f3ab437e_e615d6cb",
+        "filename": ".stylelintrc.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2020-06-04T10:29:37Z",
+      "side": 1,
+      "message": "It is missing a comma:\n\n - }\n + },\n\n:)",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 1
+      },
+      "revId": "96e3a12bc0d40fab03b777e3c8ac1d9e06af292b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
