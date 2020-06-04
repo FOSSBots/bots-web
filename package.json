@@ -1,9 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "test": "stylelint 'public_html/**/*.css'"
+    "test": "npm run stylelint && npm run htmllint",
+    "stylelint": "stylelint 'public_html/**/*.css'",
+    "htmllint": "htmllint 'public_html/**/*.html'"
   },
   "devDependencies": {
+    "htmllint-cli": "0.0.7",
     "stylelint": "^13.5.0",
     "stylelint-config-standard": "^20.0.0"
   }
