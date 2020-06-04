@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "02ec2131_a0f0f15e",
+        "filename": ".stylelintignore",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2020-06-04T11:29:03Z",
+      "side": 1,
+      "message": "The directory is Font-Awesome , not FontAwesome :)",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 23
+      },
+      "revId": "4821f3981b7e11f02853e335ce4a30f17cbb863a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97f2cf69_8562805c",
+        "filename": ".stylelintrc.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2020-06-04T11:29:03Z",
+      "side": 1,
+      "message": "There is a new tabulation here when the file uses 2 spaces for indentation ;)",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 1
+      },
+      "revId": "4821f3981b7e11f02853e335ce4a30f17cbb863a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
