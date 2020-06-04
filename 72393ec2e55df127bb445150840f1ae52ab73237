@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9e6a2284_be722cb8",
+        "filename": "project.config",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2020-06-04T11:44:47Z",
+      "side": 1,
+      "message": "JenkinsBot does not need to push. It just submit and already has the permission ;]",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "72393ec2e55df127bb445150840f1ae52ab73237",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
