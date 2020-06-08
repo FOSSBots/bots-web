@@ -965,22 +965,22 @@
             To restart the bot first ssh to dev.tools.wmflabs.org.
             <pre>ssh (your username)@dev.tools.wmflabs.org</pre>
             Next become ZppixBot.
-            <pre>(your username)@tools-bastion-03:~$ become zppixbot</pre>
+            <pre>(your username)@tools-sgebastion-07:~$ become zppixbot</pre>
             Next run the following command:
-            <pre>tools.zppixbot@tools-bastion-03:~$ kubectl get pods </pre>
+            <pre>tools.zppixbot@tools-sgebastion-07:~$ kubectl get pods </pre>
             Then copy the line under the name column that starts with sopel.bot and only copy it till the last letter in that column line for that name.
             Finally run the following command:
-            <pre>tools.zppixbot@tools-bastion-03:~$ kubectl delete pods sopel.bot-(enter what you copied from the last command)</pre>
+            <pre>tools.zppixbot@tools-sgebastion-07:~$ kubectl delete pods sopel.bot-(enter what you copied from the last command)</pre>
             The bot will quit from IRC and rejoin.
             <h2 id="improving-modules">Improving Modules</h2>
             To make any module changes or additions, first commit the changes/additions on our GitHub repository.
             Next SSH to Toolforge and become ZppixBot.
             <pre>ssh (your username)@dev.tools.wmflabs.org
-(your username)@tools-bastion-03:~$ become zppixbot
-tools.zppixbot@tools-bastion-03:~$</pre>
+(your username)@tools-sgebastion-07:~$ become zppixbot
+tools.zppixbot@tools-sgebastion-07:~$</pre>
             Using the cd command, change your current working directory to ~/.sopel and once in said directory run git pull. This pulls in any new changes to the GitHub repository.
-            <pre>zppixbot@tools-bastion-03:~$ cd ~/.sopel
-tools.zppixbot@tools-bastion-03:~/.sopel$ git pull</pre>
+            <pre>zppixbot@tools-sgebastion-07:~$ cd ~/.sopel
+tools.zppixbot@tools-sgebastion-07:~/.sopel$ git pull</pre>
             Finally, to reload the module say .reload in a PM with ZppixBot on IRC or in a channel with the bot say ZppixBot: reload.
             <h2 id="config-changes">Configuration Changes</h2>
             1. ssh to Toolforge and become ZppixBot<br/>
@@ -990,18 +990,18 @@ tools.zppixbot@tools-bastion-03:~/.sopel$ git pull</pre>
             <h2 id="cancel-reminder">Canceling Reminders</h2>
             To cancel a reminder first connect to Toolforge and become ZppixBot.
             <pre>ssh (your username)@dev.tools.wmflabs.org
-(your username)@tools-bastion-03:~$ become zppixbot
-tools.zppixbot@tools-bastion-03:~$</pre>
+(your username)@tools-sgebastion-07:~$ become zppixbot
+tools.zppixbot@tools-sgebastion-07:~$</pre>
             Next cd into ~/.sopel and edit ZppixBot-chat.freenode.net.reminders.db and remove the entry for the reminder you want to cancel, and save the file.
-            <pre>zppixbot@tools-bastion-03:~$ cd ~/.sopel
-tools.zppixbot@tools-bastion-03:~/.sopel$ nano ZppixBot-chat.freenode.net.reminders.db</pre>
+            <pre>zppixbot@tools-sgebastion-07:~$ cd ~/.sopel
+tools.zppixbot@tools-sgebastion-07:~/.sopel$ nano ZppixBot-chat.freenode.net.reminders.db</pre>
             Finally, follow <a href="#restarting-zppixbot">the guide to restart the bot</a> above.
             <h2 id="update-website">Website Updates</h2>
             For most changes, simply giving C+2 will auto-merge and deploy within ~20 mins.
             If you can not use auto-deploy, C+2 your change on gerrit. Next ssh to Toolforge and become ZppixBot.
             <pre>ssh (your username)@login.toolforge.org
-(your username)@tools-bastion-03:~$ become zppixbot
-tools.zppixbot@tools-bastion-03:~$</pre>
+(your username)@tools-sgebastion-07:~$ become zppixbot
+tools.zppixbot@tools-sgebastion-07:~$</pre>
             Next run deploy.py. This will pull in any new changes to the repository on gerrit.wikimedia.org.
             <pre>tools.zppixbot@tools-bastion-03:~$ /data/project/zppixbot/bin/python3 /data/project/zppixbot/ZppixBot/deploy.py </pre>
             Go to zppixbot.toolforge.org and check to make sure your changes are present.
