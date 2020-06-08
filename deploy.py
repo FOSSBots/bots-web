@@ -1,7 +1,7 @@
 from git import *
 import time
 from datetime import datetime, date
-import os
+import os, subprocess
 start = time.time()
 ## WARNING ##
 # This script should not be changed without caution. 
@@ -19,4 +19,4 @@ else:
     repo = Repo('/data/project/zppixbot/ZppixBot')
     for submodule in repo.submodules:
         out = submodule.update(init=True)
-    os.system('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
+    subprocess.call("./logmsg.sh", "--msg", "auto-update@website: Synced website repo in {0}s".format(str(time.time()-start)[:3]))
