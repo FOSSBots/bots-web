@@ -5,7 +5,7 @@ import os
 start = time.time()
 ## WARNING ##
 # This script should not be changed without caution. 
-# It will auto-deploy every 15 minutes and changes can break the auto-deploy infrastrcuture.
+# It will auto-deploy every 15 minutes and changes can break the auto-deploy infrastructure.
 # This script auto-logs and if that fails can spam #wikimedia-cloud.
 ## WARNING ##
 repo = Git('/data/project/zppixbot/ZppixBot')

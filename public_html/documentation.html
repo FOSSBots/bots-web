@@ -997,13 +997,13 @@ tools.zppixbot@tools-bastion-03:~$</pre>
 tools.zppixbot@tools-bastion-03:~/.sopel$ nano ZppixBot-chat.freenode.net.reminders.db</pre>
             Finally, follow <a href="#restarting-zppixbot">the guide to restart the bot</a> above.
             <h2 id="update-website">Website Updates</h2>
-            First push your changes to the repository on gerrit.wikimedia.org. Next ssh to Toolforge and become ZppixBot.
-            <pre>ssh (your username)@dev.tools.wmflabs.org
+            For most changes, simply giving C+2 will auto-merge and deploy within ~20 mins.
+            If you can not use auto-deploy, C+2 your change on gerrit. Next ssh to Toolforge and become ZppixBot.
+            <pre>ssh (your username)@login.toolforge.org
 (your username)@tools-bastion-03:~$ become zppixbot
 tools.zppixbot@tools-bastion-03:~$</pre>
-            Next cd into ~/ZppixBot and run git pull. This will pull in any new changes to the repository on gerrit.wikimedia.org.
-            <pre>tools.zppixbot@tools-bastion-03:~$ cd ~/ZppixBot
-tools.zppixbot@tools-bastion-03:~/ZppixBot$ git pull</pre>
+            Next run deploy.py. This will pull in any new changes to the repository on gerrit.wikimedia.org.
+            <pre>tools.zppixbot@tools-bastion-03:~$ /data/project/zppixbot/bin/python3 /data/project/zppixbot/ZppixBot/deploy.py </pre>
             Go to zppixbot.toolforge.org and check to make sure your changes are present.
         </div>
     </body>
