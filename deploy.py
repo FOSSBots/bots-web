@@ -3,6 +3,11 @@ import time
 from datetime import datetime, date
 import os
 start = time.time()
+## WARNING ##
+# This script should not be changed without caution. 
+# It will auto-deploy every 15 minutes and changes can break the auto-deploy infrastrcuture.
+# This script auto-logs and if that fails can spam #wikimedia-cloud.
+## WARNING ##
 repo = Git('/data/project/zppixbot/ZppixBot')
 out = repo.pull('origin', 'master')
 print(out)
@@ -18,5 +23,4 @@ else:
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     today = date.today()
-    ##os.system('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
-    print('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
+    os.system('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
