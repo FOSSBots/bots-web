@@ -6,7 +6,7 @@ start = time.time()
 repo = Git('/data/project/zppixbot/ZppixBot')
 out = repo.pull('origin', 'master')
 print(out)
-if out == 'Already up to date.':
+if out == 'Already up to date.' or out == 'Already up-to-date.':
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     today = date.today()
