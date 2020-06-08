@@ -18,5 +18,5 @@ if out == 'Already up to date.' or out == 'Already up-to-date.':
 else:
     repo = Repo('/data/project/zppixbot/ZppixBot')
     for submodule in repo.submodules:
-        out = submodule.update(init=True)
+        submodule.update(init=True)
     subprocess.call("./logmsg.sh", "--msg", "auto-update@website: Synced website repo in {0}s".format(str(time.time()-start)[:3]))
