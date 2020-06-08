@@ -19,4 +19,4 @@ else:
     repo = Repo('/data/project/zppixbot/ZppixBot')
     for submodule in repo.submodules:
         out = submodule.update(init=True)
-    subprocess.call(['./logmsg.sh', 'auto-update@website: Synced website repo in {0}s'.format(str(time.time()-start)[:3])])
+    subprocess.call(['sh', '/data/project/zppixbot/ZppixBot/logmsg.sh', 'auto-update@website: Synced website repo in {0}s'.format(str(time.time()-start)[:3])])
