@@ -3,7 +3,7 @@ import time
 from datetime import datetime, date
 import os
 start = time.time()
-repo = Git('/data/project/zppixbot/testrepo')
+repo = Git('/data/project/zppixbot/ZppixBot')
 out = repo.pull('origin', 'master')
 if out == 'Already up to date.':
     now = datetime.now()
@@ -11,7 +11,7 @@ if out == 'Already up to date.':
     today = date.today()
     print('[{0} - {1}] Found nothing to update in {2}s'.format(today,current_time,str(time.time()-start)[:3]))
 else:
-    repo = Repo('/data/project/zppixbot/testrepo')
+    repo = Repo('/data/project/zppixbot/ZppixBot')
     for submodule in repo.submodules:
         out = submodule.update(init=True)
     now = datetime.now()
