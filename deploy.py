@@ -5,6 +5,7 @@ import os
 start = time.time()
 repo = Git('/data/project/zppixbot/ZppixBot')
 out = repo.pull('origin', 'master')
+print(out)
 if out == 'Already up to date.':
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
@@ -17,4 +18,5 @@ else:
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     today = date.today()
-    os.system('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
+    ##os.system('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
+    print('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
