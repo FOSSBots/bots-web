@@ -10,7 +10,6 @@ start = time.time()
 ## WARNING ##
 repo = Git('/data/project/zppixbot/ZppixBot')
 out = repo.pull('origin', 'master')
-print(out)
 if out == 'Already up to date.' or out == 'Already up-to-date.':
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
@@ -20,7 +19,4 @@ else:
     repo = Repo('/data/project/zppixbot/ZppixBot')
     for submodule in repo.submodules:
         out = submodule.update(init=True)
-    now = datetime.now()
-    current_time = now.strftime("%H:%M:%S")
-    today = date.today()
     os.system('dologmsg "auto-update@website: Synced website repo in {0}s"'.format(str(time.time()-start)[:3]))
