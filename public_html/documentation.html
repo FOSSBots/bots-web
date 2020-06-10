@@ -34,12 +34,12 @@
             <h1>Table of Contents</h1>
             <ol>
                 <li><a href="#list-of-commands">List of Commands</a></li>
-                <li><a href="#module-development">Module Development</a></li>
+                <li><a href="#plugin-development">Plugin Development</a></li>
                 <li><a href="#managing-zppixbot">Managing ZppixBot (for maintainers)</a></li>
                 <li>
                     <ol>
                         <li><a href="#restarting-zppixbot">Restarting ZppixBot</a></li>
-                        <li><a href="#improving-modules">Improving Modules</a></li>
+                        <li><a href="#improving-plugins">Improving Plugins</a></li>
                         <li><a href="#config-changes">Configuration Changes</a></li>
                         <li><a href="#cancel-reminder">Canceling Reminders</a></li>
                         <li><a href="#update-website">Website Updates</a></li>
@@ -865,7 +865,7 @@
                     </tbody>
                 </table>
             </div>
-            <h1 id="module-development">Module Development</h1>
+            <h1 id="plugin-development">Plugin Development</h1>
             If you decided to extend ZppixBot with some functionality, you will need to create a new module.<br />
             This instruction will guide you through the process of custom module development<br />
             First of all, create a new file in <i>modules</i> directory with name <i>your_module.py</i><br />
@@ -972,7 +972,7 @@
             Finally run the following command:
             <pre>tools.zppixbot@tools-sgebastion-07:~$ kubectl delete pods sopel.bot-(enter what you copied from the last command)</pre>
             The bot will quit from IRC and rejoin.
-            <h2 id="improving-modules">Improving Modules</h2>
+            <h2 id="improving-plugins">Improving Plugins</h2>
             To make any module changes or additions, first commit the changes/additions on our GitHub repository.
             Next SSH to Toolforge and become ZppixBot.
             <pre>ssh (your username)@dev.tools.wmflabs.org
