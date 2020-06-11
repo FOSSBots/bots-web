@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://zppixbot.toolforge.org/</loc>
+	<lastmod>2020-06-11T15:53:24+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://zppixbot.toolforge.org/documentation.html</loc>
+	<lastmod>2020-06-11T15:53:27+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://zppixbot.toolforge.org/contribs.html</loc>
+	<lastmod>2020-06-11T15:53:27+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://zppixbot.toolforge.org/about.html</loc>
+	<lastmod>2020-06-11T15:53:28+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://zppixbot.toolforge.org/wiki/Source_Code</loc>
+	<lastmod>2020-06-11T15:53:28+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://zppixbot.toolforge.org/wiki/Main_Page</loc>
+	<lastmod>2020-06-11T15:53:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://zppixbot.toolforge.org/wiki/Privacy_Policy</loc>
+	<lastmod>2020-06-11T15:53:36+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>
