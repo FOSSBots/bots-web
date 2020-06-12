@@ -25,10 +25,10 @@
     <body>
         <div class="topnav" id="nav">
             <img src="logo.png" alt="ZppixBot Logo" width="48" height="48" style="float:left;vertical-align:middle;margin:0px 10px">
-            <a class="active" href="index.html">Home</a>
-            <a href="documentation.html">Documentation</a>
-            <a href="contribs.html">Contributors</a>
-            <a href="about.html">About</a>
+            <a class="active" href="index">Home</a>
+            <a href="documentation">Documentation</a>
+            <a href="contribs">Contributors</a>
+            <a href="about">About</a>
             <a href="wiki/Source_Code">Source Code</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i></a>
