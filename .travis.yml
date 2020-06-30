@@ -3,7 +3,7 @@ os: linux
 install:
   - npm ci
 script:
-  - npm run stylelint && npm run htmllint
+  - npm test stylelint && npm run htmllint
 notifications:
   irc:
     channels:
