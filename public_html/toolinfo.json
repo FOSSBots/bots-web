@@ -1,9 +1,0 @@
-{
-    "name" : "ZppixBot",
-    "title" : "ZppixBot",
-    "description" : "IRC bot running Sopel",
-    "url" : "http://tools.wmflabs.org/zppixbot",
-    "keywords" : "IRC, bot, Zppix, ZppixBot, Python",
-    "author" : "Zppix (Developer/Operator)", "Reception123 (Developer)", "MacFan4000 (Web design/Operator)", "Phantom42 (Web design/Developer)", "SwisterTwister",
-    "repository" : "https://phabricator.wikimedia.org/diffusion/LTZB/"
-}
