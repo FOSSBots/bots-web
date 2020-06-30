@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /css/
 Disallow: /wiki/Special:
-Sitemap: https://zppixbot.toolforge.org/sitemap.xml
+Sitemap: https://bots.miraheze.wiki/sitemap.xml
