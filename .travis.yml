@@ -1,10 +1,11 @@
 dist: xenial
 os: linux
 language: generic
-node_js:
-  - 10
 install:
   - npm ci
+before_script:
+  - node --version
+  - npm --version
 script:
   - npm run stylelint
   - npm run htmllint
