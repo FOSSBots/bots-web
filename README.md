@@ -1,2 +1,2 @@
 # bots-web
-Source code for the static bot documentation
+Source code for static bot documentation content.
