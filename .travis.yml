@@ -1,5 +1,8 @@
 dist: xenial
 os: linux
+language: generic
+node_js:
+  - 10
 install:
   - npm ci
 script:
