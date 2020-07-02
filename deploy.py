@@ -6,9 +6,8 @@ start = time.time()
 ## WARNING ##
 # This script should not be changed without caution. 
 # It will auto-deploy every 15 minutes and changes can break the auto-deploy infrastructure.
-# This script auto-logs and if that fails can spam #wikimedia-cloud.
 ## WARNING ##
-repo = Git('/data/project/zppixbot/ZppixBot')
+repo = Git('/var/www')
 out = repo.pull('origin', 'master')
 if out == 'Already up to date.' or out == 'Already up-to-date.':
     now = datetime.now()
@@ -16,6 +15,6 @@ if out == 'Already up to date.' or out == 'Already up-to-date.':
     today = date.today()
     print('[{0} - {1}] Found nothing to update in {2}s'.format(today,current_time,str(time.time()-start)[:3]))
 else:
-    repo = Repo('/data/project/zppixbot/ZppixBot')
+    repo = Repo('/var/www')
     for submodule in repo.submodules:
         out = submodule.update(init=True)
