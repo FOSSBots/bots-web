@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Documentation - ZppixBot</title>
+        <title>Documentation - MirahezeBot</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Official website of the ZppixBot Sopel IRC custom modules.">
+        <meta name="description" content="Official website of the MirahezeBot Sopel IRC custom modules.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono" rel="stylesheet" type="text/css">
         <link rel="canonical" href="https://bots.miraheze.wiki/documentation.html"/>
         <link rel="stylesheet" href="css/common.css?v=2">
         <link rel="stylesheet" href="Font-Awesome/css/all.css?v=1">
@@ -23,7 +23,7 @@
     </head>
     <body>
         <div class="topnav" id="nav">
-            <img src="logo.png" alt="ZppixBot Logo" width="48" height="48" style="float:left;vertical-align:middle;margin:0px 10px">
+            <img src="logo.png" alt="MirahezeBot Logo" width="48" height="48" style="float:left;vertical-align:middle;margin:0px 10px">
             <a href="index.html">Home</a>
             <a class="active" href="documentation.html">Documentation</a>
             <a href="contribs.html">Contributors</a>
@@ -37,10 +37,10 @@
             <ol>
                 <li><a href="#list-of-commands">List of Commands</a></li>
                 <li><a href="#module-development">Module Development</a></li>
-                <li><a href="#managing-zppixbot">Managing ZppixBot (for maintainers)</a></li>
+                <li><a href="#managing-mhbots">Managing MirahezeBot (for maintainers)</a></li>
                 <li>
                     <ol>
-                        <li><a href="#restarting-zppixbot">Restarting ZppixBot</a></li>
+                        <li><a href="#restarting-mhbots">Restarting MirahezeBot</a></li>
                         <li><a href="#improving-modules">Improving Modules</a></li>
                         <li><a href="#config-changes">Configuration Changes</a></li>
                         <li><a href="#cancel-reminder">Canceling Reminders</a></li>
@@ -668,7 +668,7 @@
                         </tr>
                         <tr>
                             <td>.source<br>.botsource</td>
-                            <td>Give the link to ZppixBot's Github.</td>
+                            <td>Give the link to MirahezeBot's Github.</td>
                             <td><code>.source</code></td>
                             <td>responses</td>
                         </tr>
@@ -898,7 +898,7 @@
                 </table>
             </div>
             <h1 id="module-development">Module Development</h1>
-            If you decided to extend ZppixBot with some functionality, you will need to create a new module.<br />
+            If you decided to extend MirahezeBot with some functionality, you will need to create a new module.<br />
             This instruction will guide you through the process of custom module development<br />
             First of all, create a new file in <i>modules</i> directory with name <i>your_module.py</i><br />
             Bot modules are python scripts, so we shall start with importing required libraries (bot is using sopel) for your module to work. Here is the list of imports typically used:
@@ -992,51 +992,39 @@
     def bot_welcome(bot, trigger):
         bot.reply('You said: ' + trigger.group(2))
     </pre>
-            <h1 id="managing-zppixbot">Managing ZppixBot (for maintainers)</h1>
-            <h2 id="restarting-zppixbot">Restarting ZppixBot</h2>
-            To restart the bot first ssh to dev.tools.wmflabs.org.
-            <pre>ssh (your username)@dev.tools.wmflabs.org</pre>
-            Next become ZppixBot.
-            <pre>(your username)@tools-sgebastion-07:~$ become zppixbot</pre>
-            Next run the following command:
-            <pre>tools.zppixbot@tools-sgebastion-07:~$ kubectl get pods </pre>
-            Then copy the line under the name column that starts with sopel.bot and only copy it till the last letter in that column line for that name.
-            Finally run the following command:
-            <pre>tools.zppixbot@tools-sgebastion-07:~$ kubectl delete pods sopel.bot-(enter what you copied from the last command)</pre>
-            The bot will quit from IRC and rejoin.
+            <h1 id="managing-mhbots">Managing MirahezeBot (for maintainers)</h1>
+            <h2 id="restarting-mhbots">Restarting MirahezeBot</h2>
+            To restart the bot first ssh to 100.node4.net.fosshost.org.
+            <pre>ssh (your username)@100</pre>
+            Run the following command:
+            <pre>(your username)@100:~$ sudo /usr/sbin/service [mirahezebot|mirahezebottest] [stop|start|restart]</pre>
             <h2 id="improving-modules">Improving Modules</h2>
-            To make any module changes or additions, first commit the changes/additions on our GitHub repository.
-            Next SSH to Toolforge and become ZppixBot.
-            <pre>ssh (your username)@dev.tools.wmflabs.org
-(your username)@tools-sgebastion-07:~$ become zppixbot
-tools.zppixbot@tools-sgebastion-07:~$</pre>
-            Using the cd command, change your current working directory to ~/.sopel and once in said directory run git pull. This pulls in any new changes to the GitHub repository.
-            <pre>zppixbot@tools-sgebastion-07:~$ cd ~/.sopel
+            To make any module changes or additions, first commit the changes/additions to our GitHub repository.
+            Next SSH to the server.
+            Using the cd command, change your current working directory to /srv/sopelbots/[test|prod] and once in said directory run git pull. This pulls in any new changes to the GitHub repository.
+            <pre>zppixbot@tools-sgebastion-07:~$ cd /srv/sopelbots/[test|prod]
 tools.zppixbot@tools-sgebastion-07:~/.sopel$ git pull</pre>
-            Finally, to reload the module say .reload in a PM with ZppixBot on IRC or in a channel with the bot say ZppixBot: reload.
+            Finally, to reload the module say .reload in a PM with the bot on IRC or in a channel with the bot say [nick]: reload.
             <h2 id="config-changes">Configuration Changes</h2>
-            1. ssh to Toolforge and become ZppixBot<br/>
-            2. cd into ~/.sopel<br/>
+            1. ssh into the server<br/>
+            2. cd into /srv/sopelbots/[test|prod]<br/>
             3. Make any necessary changes to the config by editing default.cfg (ie: nano default.cfg or vim default.cfg) and save the file.<br/>
             4. Restart the bot using the guide above.
             <h2 id="cancel-reminder">Canceling Reminders</h2>
-            To cancel a reminder first connect to Toolforge and become ZppixBot.
-            <pre>ssh (your username)@dev.tools.wmflabs.org
-(your username)@tools-sgebastion-07:~$ become zppixbot
-tools.zppixbot@tools-sgebastion-07:~$</pre>
-            Next cd into ~/.sopel and edit ZppixBot-chat.freenode.net.reminders.db and remove the entry for the reminder you want to cancel, and save the file.
-            <pre>zppixbot@tools-sgebastion-07:~$ cd ~/.sopel
-tools.zppixbot@tools-sgebastion-07:~/.sopel$ nano ZppixBot-chat.freenode.net.reminders.db</pre>
-            Finally, follow <a href="#restarting-zppixbot">the guide to restart the bot</a> above.
+            To cancel a reminder first connect to the server.
+            <pre>ssh (your username)@100.node4.net.fosshost.org
+(your username)@100:~$</pre>
+            Next cd into /srv/sopelbots/[test|prod] and edit *-chat.freenode.net.reminders.db and remove the entry for the reminder you want to cancel, and save the file.
+            <pre>(your username)t@100:~$ cd /srv/sopelbots/[test|prod]
+(your username)@100:~/.sopel$ nano *-chat.freenode.net.reminders.db</pre>
+            Finally, follow <a href="#restarting-mhbots">the guide to restart the bot</a> above.
             <h2 id="update-website">Website Updates</h2>
-            For most changes, simply giving C+2 will auto-merge and deploy within ~20 mins.
-            If you can not use auto-deploy, C+2 your change on gerrit. Next ssh to Toolforge and become ZppixBot.
-            <pre>ssh (your username)@login.toolforge.org
-(your username)@tools-sgebastion-07:~$ become zppixbot
-tools.zppixbot@tools-sgebastion-07:~$</pre>
-            Next run deploy.py. This will pull in any new changes to the repository on gerrit.wikimedia.org.
-            <pre>tools.zppixbot@tools-bastion-03:~$ /data/project/zppixbot/bin/python3 /data/project/zppixbot/ZppixBot/deploy.py </pre>
-            Go to zppixbot.toolforge.org and check to make sure your changes are present.
+            For most changes, simply merging will deploy within ~20 mins.
+            If you can not use auto-deploy or it is down, merge your change on GitHub. Next ssh to the server.
+            <pre>ssh (your username)@100.node4.net.fosshost.org
+            Next run deploy.py. This will pull in any new changes to the repository on GitHub.
+            <pre>(your username)@100:~$ python3 /var/www/deploy.py </pre>
+            Go to bots.miraheze.wiki and check to make sure your changes are present.
         </div>
     </body>
 </html>
