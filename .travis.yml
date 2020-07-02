@@ -7,8 +7,7 @@ before_script:
   - node --version
   - npm --version
 script:
-  - npm run stylelint
-  - npm run htmllint
+  - npm test
 notifications:
   irc:
     channels:
