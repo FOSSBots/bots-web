@@ -100,14 +100,15 @@ pre {
         text-align: left;
     }
 }
+
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #1faa00;
-  color: #000;
-  text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #263238;
+    color: #fff;
+    text-align: center;
 }
 
 .content {
