@@ -1,6 +1,8 @@
 dist: xenial
 os: linux
 language: generic
+node_js:
+  - node
 install:
   - npm ci
 before_script:
