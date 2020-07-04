@@ -102,13 +102,16 @@ pre {
 }
 
 .footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
+    position: fixed;
+    height: 50px;
+    left: 0px;
+    bottom: 0px;
     width: 100%;
     background-color: #263238;
     color: #fff;
     text-align: center;
+    right: 0px;
+    margin-bottom: 0px;
 }
 
 .content {
