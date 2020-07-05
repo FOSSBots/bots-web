@@ -1,23 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-	<loc>https://bots.miraheze.wiki/</loc>
-	<lastmod>2020-06-30T15:53:24+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>http://bots.miraheze.wiki/</loc>
+  <lastmod>2020-07-04T21:54:44+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-	<loc>https://bots.miraheze.wiki/documentation.html</loc>
-	<lastmod>2020-06-30T15:53:27+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>http://bots.miraheze.wiki/index.html</loc>
+  <lastmod>2020-07-04T21:54:44+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://bots.miraheze.wiki/contribs.html</loc>
-	<lastmod>2020-06-30T15:53:27+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>http://bots.miraheze.wiki/documentation.html</loc>
+  <lastmod>2020-07-04T21:54:44+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://bots.miraheze.wiki/about.html</loc>
-	<lastmod>2020-06-30T15:53:28+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>http://bots.miraheze.wiki/contribs.html</loc>
+  <lastmod>2020-07-04T21:54:44+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>http://bots.miraheze.wiki/about.html</loc>
+  <lastmod>2020-07-04T21:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://bots.miraheze.wiki/terms.html</loc>
+  <lastmod>2020-07-04T21:54:44+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>http://bots.miraheze.wiki/privacy.html</loc>
+  <lastmod>2020-07-04T21:54:44+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+
+
 </urlset>

@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /css/
 Sitemap: https://bots.miraheze.wiki/sitemap.xml
