@@ -126,3 +126,7 @@ pre {
     padding: 14px 16px;
     flex-grow: 1;
 }
+
+div a i {
+	color: #fff;
+}
