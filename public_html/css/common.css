@@ -114,7 +114,7 @@ pre {
     color: #fff;
     text-align: center;
     margin-bottom: 0;
-    height: 25px;
+    height: 50px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -127,6 +127,31 @@ pre {
     flex-grow: 1;
 }
 
-div a i {
-	color: #fff;
+ul {
+    overflow: auto;
+}
+
+ul li {
+    list-style-type: none;
+    float: left;
+}
+
+ul li a i {
+    background: #205D7A;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+}
+
+.fa-facebook {
+    background:#3b5998
+} 
+
+.fa-twitter {
+    background:#00aced
 }
