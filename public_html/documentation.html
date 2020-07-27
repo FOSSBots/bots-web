@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono" rel="stylesheet" type="text/css">
         <link rel="canonical" href="https://bots.miraheze.wiki/documentation.html"/>
-        <link rel="stylesheet" href="css/common.css?v=3">
+        <link rel="stylesheet" href="css/common.css?v=6">
         <link rel="stylesheet" href="Font-Awesome/css/all.css?v=2">
         <script>
             function myFunction() {
@@ -999,12 +999,7 @@
             Run the following command:
             <pre>(your username)@100:~$ sudo /usr/sbin/service [mirahezebot|mirahezebottest] [stop|start|restart]</pre>
             <h2 id="improving-modules">Improving Modules</h2>
-            To make any module changes or additions, first commit the changes/additions to our GitHub repository.
-            Next SSH to the server.
-            Using the cd command, change your current working directory to /srv/sopelbots/[test|prod] and once in said directory run git pull. This pulls in any new changes to the GitHub repository.
-            <pre>zppixbot@tools-sgebastion-07:~$ cd /srv/sopelbots/[test|prod]
-tools.zppixbot@tools-sgebastion-07:~/.sopel$ git pull</pre>
-            Finally, to reload the module say .reload in a PM with the bot on IRC or in a channel with the bot say [nick]: reload.
+            See https://bots.miraheze.org/wiki/Deploying_Changes
             <h2 id="config-changes">Configuration Changes</h2>
             1. ssh into the server<br/>
             2. cd into /srv/sopelbots/[test|prod]<br/>
@@ -1028,7 +1023,12 @@ tools.zppixbot@tools-sgebastion-07:~/.sopel$ git pull</pre>
         </div>
     <footer>
         <div class="footer">
-            <p>&nbsp;&nbsp;<a href="terms.html">Terms of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;</p>
+            <ul>
+                <li><a href="terms.html"><p>Terms of Use</p></a></li>
+                <li><a href="privacy.html"><p>Privacy Policy</p></a></li>
+                <li><a href="https://twitter.com/MirahezeB"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/MirahezeBots/"><i class="fab fa-facebook"></i></a></li>
+            </ul>
         </div>
     </footer>
     </body>
