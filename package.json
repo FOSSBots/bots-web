@@ -8,9 +8,7 @@
   "devDependencies": {
     "htmllint-cli": "0.0.7",
     "stylelint": "^13.6.1",
-    "stylelint-config-standard": "^20.0.0"
-  },
-  "dependencies": {
+    "stylelint-config-standard": "^20.0.0",
     "htmllint": "^0.8.0"
   }
 }
