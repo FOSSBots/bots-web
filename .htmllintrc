@@ -47,7 +47,6 @@
     "html-valid-content-model": true,
     "head-valid-content-model": true,
     "href-style": false,
-    "link-req-noopener": true,
     "label-req-for": true,
     "line-end-style": "lf",
     "line-no-trailing-whitespace": true,
@@ -63,6 +62,5 @@
     "input-radio-req-name": true,
     "input-req-label": false,
     "table-req-caption": false,
-    "table-req-header": false,
-    "tag-req-attr": false
+    "table-req-header": false
 }
