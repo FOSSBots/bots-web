@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: gitsubmodule
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    labels:
+      - "merge when green"
+      - "dependencies"
+    ignore:
+      - dependency-name: htmllint
+        versions:
+          - ">= 0.8.a"
+          - "< 0.9"
