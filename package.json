@@ -9,6 +9,6 @@
     "htmllint-cli": "0.0.7",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
-    "htmllint": "0.7.2"
+    "htmllint": "0.7.3"
   }
 }
