@@ -3,7 +3,7 @@
     <head>
         <title>Documentation - MirahezeBot</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Official website of the MirahezeBot Sopel IRC custom modules.">
+        <meta name="description" content="Official website of the MirahezeBot Sopel IRC custom plugins.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono" rel="stylesheet" type="text/css">
@@ -54,10 +54,10 @@
                     <caption>Command Documentation table</caption>
                     <thead>
                         <tr>
-                            <th>Commands</th>
-                            <th>Purpose</th>
-                            <th>Example</th>
-                            <th>Plugin</th>
+                            <th scope="col">Commands</th>
+                            <th scope="col">Purpose</th>
+                            <th scope="col">Example</th>
+                            <th scope="col">Plugin</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -964,10 +964,10 @@
                     </tbody>
                 </table>
             </div>
-            <h1 id="module-development">Module Development</h1>
+            <h1 id="module-development">Plugin Development</h1>
             If you decided to extend MirahezeBot with some functionality, you will need to create a new module.<br />
-            This instruction will guide you through the process of custom module development<br />
-            First of all, create a new file in <i>modules</i> directory with name <i>your_module.py</i><br />
+            This instruction will guide you through the process of custom plugin development<br />
+            First of all, create a new file in <em>modules</em> directory with name <em>your_module.py</em><br />
             Bot modules are python scripts, so we shall start with importing required libraries (bot is using sopel) for your module to work. Here is the list of imports typically used:
 
             <pre>
@@ -987,20 +987,20 @@
         bot.say('Hi ' + trigger.nick + '!')
     </pre>
 
-            <b>Explanation</b>: using <i>@commands</i> we specify which command bot should react to (in our case ".hi")<br />
+            <strong>Explanation</strong>: using <em>@commands</em> we specify which command bot should react to (in our case ".hi")<br />
             Handler function has two parameters:<br />
             <ul>
                 <li>bot - bot instance, we use it to interact with chat (i.e. to send messages)</li>
                 <li>trigger - provides us info about incoming command (text, sender, etc)</li>
             </ul>
-            So in our example, we use <i>bot.say</i> to send message to the chat saying "hi, your_name!"<br />
+            So in our example, we use <em>bot.say</em> to send message to the chat saying "hi, your_name!"<br />
             This is minimum required code for your module to function. You may try running it now.<br />
             <br />
             Unluckily, our bot will react only to ".hi" messages, but you may want it to react to ".hello" and ".hey" as well<br />
             In order to achieve that, we may set multiple command variations bot will respond to by specifying all of them in the decorator:
 
             <pre>
-    <b>@commands('hi', 'hello', 'hey')</b>
+    <strong>@commands('hi', 'hello', 'hey')</strong>
     def bot_hi(bot, trigger):
         bot.say('Hi ' + trigger.nick + '!')
     </pre>
@@ -1010,7 +1010,7 @@
             Finally, you may want bot to accept some input from user. To demonstrate how to achieve that, let's develop a function which will welcome chat newcomers<br />
             For example, if John joins your chat, you may ask bot to welcome him with command ".welcome John" and bot will send a message saying "Welcome, John! Enjoy yourself in this chat!"<br />
             Similarly, you may ask bot to welcome Bob my saying ".welcome Bob" and bot will say "Welcome, Bob! Enjoy yourself in this chat!"<br />
-            Let's also use <i>@example decorator</i> to provide command usage example:
+            Let's also use <em>@example decorator</em> to provide command usage example:
 
             <pre>
     @commands('welcome')
@@ -1019,9 +1019,9 @@
         bot.say('Welcome ' + trigger.group(2) + '! Enjoy yourself in this chat!')
     </pre>
 
-            <b>Explanation</b>: we use <i>trigger.group(2)</i> to get the text after the command (in our example - name of user to welcome)<br />
+            <strong>Explanation</strong>: we use <em>trigger.group(2)</em> to get the text after the command (in our example - name of user to welcome)<br />
             <br />
-            Additionally, you may use <i>bot.reply</i>, which is similar to <i>bot.say</i>, but puts message sender name in the beginning of the message<br />
+            Additionally, you may use <em>bot.reply</em>, which is similar to <em>bot.say</em>, but puts message sender name in the beginning of the message<br />
             To demonstrate that, let's create an "echo" function - it will send back to you your message, which will be starting with you name (i.e mention you):
 
             <pre>
@@ -1033,7 +1033,7 @@
 
             That was an example of simple module. We recommend you visiting <a href="https://github.com/sopel-irc/sopel/wiki">Sopel Wiki</a> for more info on this topic.<br />
             <br />
-            Complete source code of this example (file <i>simple_module.py</i>):
+            Complete source code of this example (file <em>simple_module.py</em>):
 
             <pre>
     from __future__ import unicode_literals, absolute_import, print_function, division
@@ -1093,8 +1093,8 @@
             <ul>
                 <li><a href="terms.html"><p>Terms of Use</p></a></li>
                 <li><a href="privacy.html"><p>Privacy Policy</p></a></li>
-                <li><a href="https://twitter.com/MirahezeB"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/MirahezeBots/"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/MirahezeB"><i class="fab fa-twitter"></em></a></li>
+                <li><a href="https://www.facebook.com/MirahezeBots/"><i class="fab fa-facebook"></em></a></li>
             </ul>
         </div>
     </footer>
