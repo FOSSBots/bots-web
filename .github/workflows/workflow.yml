@@ -1,0 +1,38 @@
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Node 12
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - name: Install packages
+        run: |
+          npm ci
+      - name: Show npm and node versions
+        run: |
+          node --version
+          npm --version
+      - name: Run tests
+        run: |
+          npm run htmllint
+          npm run stylelint
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
