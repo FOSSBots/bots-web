@@ -10,7 +10,7 @@ jobs:
         with:
           submodules: true
       - name: Node 12
-      - uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
       - name: Install packages
